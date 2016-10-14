@@ -1,0 +1,44 @@
+{  Arquivo criado automaticamente Gerador Multicamadas
+   (Multitiers Generator VERSÃO 0.01)
+   Data e Hora: 11/10/2016 - 23:04:18
+}
+
+package Marvin.AulaMulticamada.Cliente.Runtime.ClientServer;
+
+{$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
+{$DESCRIPTION 'Cliente (Cliente/Servidor)'}
+{$IMPLICITBUILD OFF}
+
+requires
+  rtlMRVFrameworkCS;
+
+contains
+  Marvin.AulaMulticamada.Listas.Cliente in 'Cliente\Marvin.AulaMulticamada.Listas.Cliente.pas',
+  Marvin.AulaMulticamada.Excecoes.Cliente in 'Cliente\Marvin.AulaMulticamada.Excecoes.Cliente.pas',
+  Marvin.AulaMulticamada.Classes.Cliente in 'Cliente\Marvin.AulaMulticamada.Classes.Cliente.pas';
+
+end.

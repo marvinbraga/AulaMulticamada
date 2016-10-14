@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<script-gerador-multicamada>
+  <classe-dados>
+    <classe>Cliente</classe>
+    <genero>Masculino</genero>
+    <herda-de>TMRVDadosBase</herda-de>
+    <descricao>Cliente</descricao>
+    <propriedades>
+      <propriedade><nome>Clienteid</nome><tipo>Integer</tipo><tamanho>10</tamanho><eh-chave>-1</eh-chave><descricao>Id do Cliente</descricao><genero>M</genero><obrigatorio>S</obrigatorio></propriedade>
+      <propriedade><nome>TipoClienteId</nome><tipo>Integer</tipo><tamanho>10</tamanho><eh-chave>0</eh-chave><descricao>Id do TipoCliente</descricao><genero>M</genero><obrigatorio>S</obrigatorio></propriedade>
+      <propriedade><nome>Nome</nome><tipo>string</tipo><tamanho>100</tamanho><eh-chave>0</eh-chave><descricao>Nome</descricao><genero>M</genero><obrigatorio>S</obrigatorio></propriedade>
+      <propriedade><nome>Numerodocumento</nome><tipo>string</tipo><tamanho>50</tamanho><eh-chave>0</eh-chave><descricao>Número do Documento</descricao><genero>M</genero><obrigatorio>S</obrigatorio></propriedade>
+      <propriedade><nome>Datahoracadastro</nome><tipo>TDateTime</tipo><tamanho>23,3</tamanho><eh-chave>0</eh-chave><descricao>Data e Hora</descricao><genero>F</genero><obrigatorio>S</obrigatorio></propriedade>
+    </propriedades>
+  </classe-dados>
+  <tabela>
+    <nome-tabela>Cliente</nome-tabela>
+    <campos>
+      <campo><nome>ClienteId</nome><tipo>int</tipo><tamanho>10</tamanho><ponto-flutuante>0</ponto-flutuante><eh-chave-primaria>-1</eh-chave-primaria><eh-chave-estrangeira>0</eh-chave-estrangeira></campo>
+      <campo><nome>TipoCliente_TipoClienteId</nome><tipo>int</tipo><tamanho>10</tamanho><ponto-flutuante>0</ponto-flutuante><eh-chave-primaria>0</eh-chave-primaria><eh-chave-estrangeira>-1</eh-chave-estrangeira></campo>
+      <campo><nome>Nome</nome><tipo>varchar</tipo><tamanho>100</tamanho><ponto-flutuante>0</ponto-flutuante><eh-chave-primaria>0</eh-chave-primaria><eh-chave-estrangeira>0</eh-chave-estrangeira></campo>
+      <campo><nome>NumeroDocumento</nome><tipo>varchar</tipo><tamanho>50</tamanho><ponto-flutuante>0</ponto-flutuante><eh-chave-primaria>0</eh-chave-primaria><eh-chave-estrangeira>0</eh-chave-estrangeira></campo>
+      <campo><nome>DataHoraCadastro</nome><tipo>datetime</tipo><tamanho>23</tamanho><ponto-flutuante>3</ponto-flutuante><eh-chave-primaria>0</eh-chave-primaria><eh-chave-estrangeira>0</eh-chave-estrangeira></campo>
+    </campos>
+  </tabela>
+</script-gerador-multicamada>

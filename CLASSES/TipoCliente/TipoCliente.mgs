@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<script-gerador-multicamada>
+  <classe-dados>
+    <classe>TipoCliente</classe>
+    <genero>Masculino</genero>
+    <herda-de>TMRVDadosBase</herda-de>
+    <descricao>TipoCliente</descricao>
+    <propriedades>
+      <propriedade><nome>TipoClienteId</nome><tipo>Integer</tipo><tamanho>10</tamanho><eh-chave>-1</eh-chave><descricao>Id do Tipo de Cliente</descricao><genero>M</genero><obrigatorio>S</obrigatorio></propriedade>
+      <propriedade><nome>Descricao</nome><tipo>string</tipo><tamanho>100</tamanho><eh-chave>0</eh-chave><descricao>Descrição</descricao><genero>F</genero><obrigatorio>S</obrigatorio></propriedade>
+    </propriedades>
+  </classe-dados>
+  <tabela>
+    <nome-tabela>TipoCliente</nome-tabela>
+    <campos>
+      <campo><nome>TipoClienteId</nome><tipo>int</tipo><tamanho>10</tamanho><ponto-flutuante>0</ponto-flutuante><eh-chave-primaria>-1</eh-chave-primaria><eh-chave-estrangeira>0</eh-chave-estrangeira></campo>
+      <campo><nome>Descricao</nome><tipo>varchar</tipo><tamanho>100</tamanho><ponto-flutuante>0</ponto-flutuante><eh-chave-primaria>0</eh-chave-primaria><eh-chave-estrangeira>0</eh-chave-estrangeira></campo>
+    </campos>
+  </tabela>
+</script-gerador-multicamada>
