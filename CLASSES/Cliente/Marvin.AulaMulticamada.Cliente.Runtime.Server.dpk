@@ -1,0 +1,48 @@
+{  Arquivo criado automaticamente Gerador Multicamadas
+   (Multitiers Generator VERSÃO 0.01)
+   Data e Hora: 11/10/2016 - 23:04:18
+}
+
+package Marvin.AulaMulticamada.Cliente.Runtime.Server;
+
+{$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
+{$DESCRIPTION 'Cliente (Servidor)'}
+{$IMPLICITBUILD OFF}
+
+requires
+  rtlMRVFrameworkCS,
+  rtlMRVFrameworkSRV,
+  rtlMRVDaoSRV,
+  rtlMRVCamadasSRV,
+  Marvin.AulaMulticamada.Cliente.Runtime.ClientServer;
+
+contains
+  Marvin.AulaMulticamada.Bd.Cliente in 'Servidor\Marvin.AulaMulticamada.Bd.Cliente.pas',
+  Marvin.AulaMulticamada.Cadastro.Cliente in 'Servidor\Marvin.AulaMulticamada.Cadastro.Cliente.pas',
+  Marvin.AulaMulticamada.Repositorio.Cliente in 'Servidor\Marvin.AulaMulticamada.Repositorio.Cliente.pas';
+
+end.

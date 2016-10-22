@@ -27,6 +27,9 @@
         <Projects Include="CLASSES\Cliente\Marvin.AulaMulticamada.Cliente.Runtime.Server.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="CLASSES\Controladores\Marvin.AulaMulticamada.Controlador.Cliente.Runtime.Server.dproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -107,14 +110,23 @@
     <Target Name="Marvin_AulaMulticamada_Cliente_Runtime_Server:Make">
         <MSBuild Projects="CLASSES\Cliente\Marvin.AulaMulticamada.Cliente.Runtime.Server.dproj" Targets="Make"/>
     </Target>
+    <Target Name="Marvin_AulaMulticamada_Controlador_Cliente_Runtime_Server">
+        <MSBuild Projects="CLASSES\Controladores\Marvin.AulaMulticamada.Controlador.Cliente.Runtime.Server.dproj"/>
+    </Target>
+    <Target Name="Marvin_AulaMulticamada_Controlador_Cliente_Runtime_Server:Clean">
+        <MSBuild Projects="CLASSES\Controladores\Marvin.AulaMulticamada.Controlador.Cliente.Runtime.Server.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Marvin_AulaMulticamada_Controlador_Cliente_Runtime_Server:Make">
+        <MSBuild Projects="CLASSES\Controladores\Marvin.AulaMulticamada.Controlador.Cliente.Runtime.Server.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="rtlMRVFrameworkCS;rtlMRVFrameworkSRV;rtlMRVCamadasSRV;rtlMRVConexaoSRV;Marvin_AulaMulticamada_TipoCliente_Runtime_ClientServer;Marvin_AulaMulticamada_Cliente_Runtime_ClientServer;Marvin_AulaMulticamada_TipoCliente_Runtime_Server;Marvin_AulaMulticamada_Cliente_Runtime_Server"/>
+        <CallTarget Targets="rtlMRVFrameworkCS;rtlMRVFrameworkSRV;rtlMRVCamadasSRV;rtlMRVConexaoSRV;Marvin_AulaMulticamada_TipoCliente_Runtime_ClientServer;Marvin_AulaMulticamada_Cliente_Runtime_ClientServer;Marvin_AulaMulticamada_TipoCliente_Runtime_Server;Marvin_AulaMulticamada_Cliente_Runtime_Server;Marvin_AulaMulticamada_Controlador_Cliente_Runtime_Server"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="rtlMRVFrameworkCS:Clean;rtlMRVFrameworkSRV:Clean;rtlMRVCamadasSRV:Clean;rtlMRVConexaoSRV:Clean;Marvin_AulaMulticamada_TipoCliente_Runtime_ClientServer:Clean;Marvin_AulaMulticamada_Cliente_Runtime_ClientServer:Clean;Marvin_AulaMulticamada_TipoCliente_Runtime_Server:Clean;Marvin_AulaMulticamada_Cliente_Runtime_Server:Clean"/>
+        <CallTarget Targets="rtlMRVFrameworkCS:Clean;rtlMRVFrameworkSRV:Clean;rtlMRVCamadasSRV:Clean;rtlMRVConexaoSRV:Clean;Marvin_AulaMulticamada_TipoCliente_Runtime_ClientServer:Clean;Marvin_AulaMulticamada_Cliente_Runtime_ClientServer:Clean;Marvin_AulaMulticamada_TipoCliente_Runtime_Server:Clean;Marvin_AulaMulticamada_Cliente_Runtime_Server:Clean;Marvin_AulaMulticamada_Controlador_Cliente_Runtime_Server:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="rtlMRVFrameworkCS:Make;rtlMRVFrameworkSRV:Make;rtlMRVCamadasSRV:Make;rtlMRVConexaoSRV:Make;Marvin_AulaMulticamada_TipoCliente_Runtime_ClientServer:Make;Marvin_AulaMulticamada_Cliente_Runtime_ClientServer:Make;Marvin_AulaMulticamada_TipoCliente_Runtime_Server:Make;Marvin_AulaMulticamada_Cliente_Runtime_Server:Make"/>
+        <CallTarget Targets="rtlMRVFrameworkCS:Make;rtlMRVFrameworkSRV:Make;rtlMRVCamadasSRV:Make;rtlMRVConexaoSRV:Make;Marvin_AulaMulticamada_TipoCliente_Runtime_ClientServer:Make;Marvin_AulaMulticamada_Cliente_Runtime_ClientServer:Make;Marvin_AulaMulticamada_TipoCliente_Runtime_Server:Make;Marvin_AulaMulticamada_Cliente_Runtime_Server:Make;Marvin_AulaMulticamada_Controlador_Cliente_Runtime_Server:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>

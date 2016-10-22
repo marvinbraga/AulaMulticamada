@@ -71,6 +71,11 @@ type
     constructor Create; override;
   end;
 
+  EMRVClienteNumerodocumentoJaCadastrado = class(EMRVExcecoesCliente)
+  public
+    constructor Create; override;
+  end;
+
   EMRVClienteNumerodocumentoTamanhoInvalido = class(EMRVExcecoesCliente)
   public
     constructor Create(ATamanho: Integer); reintroduce; overload; virtual;
@@ -203,6 +208,14 @@ begin
   inherited Create;
   Message := Format('O tamanho do campo %S excede o valor permitido que é de %d caractere(s).',
     ['Data e Hora', ATamanho]);
+end;
+
+{ EMRVClienteNumerodocumentoJaCadastrado }
+
+constructor EMRVClienteNumerodocumentoJaCadastrado.Create;
+begin
+  inherited Create;
+  Message := 'Número do documento já cadastrado.';
 end;
 
 end.

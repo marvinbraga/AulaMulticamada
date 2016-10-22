@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2016/09/14 13:36:48.000.808,=rtl.dcp</Transaction>
+    <Transaction>2016/10/21 20:15:34.000.433,=rtl.dcp</Transaction>
+    <Transaction>2016/10/21 20:19:37.000.850,G:\Programas\Delphi\PROJETOS\POLITICA\CLASSES\Controladores\Marvin.AulaMulticamada.Controlador.Cliente.Runtime.Server.dproj=C:\Users\mv_br\OneDrive\Documentos\Embarcadero\Studio\Projects\Package1.dproj</Transaction>
+    <Transaction>2016/10/21 20:26:15.000.557,G:\Programas\Delphi\PROJETOS\AulaMulticamada\CLASSES\Controladores\Marvin.AulaMulticamada.Controlador.Cliente.Runtime.Server.dproj=G:\Programas\Delphi\PROJETOS\POLITICA\CLASSES\Controladores\Marvin.AulaMulticamada.Controlador.Cliente.Runtime.Server.dproj</Transaction>
+    <Transaction>2016/10/21 20:49:20.000.169,=G:\Programas\Delphi\PROJETOS\AulaMulticamada\CLASSES\Controladores\Servidor\Marvin.AulaMulticamada.Controlador.Cliente.pas</Transaction>
+  </Transactions>
+</BorlandProject>
