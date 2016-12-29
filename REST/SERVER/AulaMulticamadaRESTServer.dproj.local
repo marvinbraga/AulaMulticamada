@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2016/12/08 18:50:53.000.707,=G:\Programas\Delphi\PROJETOS\AulaMulticamada\REST\SERVER\FormUnit1.pas</Transaction>
+    <Transaction>2016/12/08 18:50:54.000.044,=G:\Programas\Delphi\PROJETOS\AulaMulticamada\REST\SERVER\ServerMethodsUnit1.pas</Transaction>
+    <Transaction>2016/12/08 18:50:59.000.177,=G:\Programas\Delphi\PROJETOS\AulaMulticamada\REST\SERVER\WebModuleUnit1.pas</Transaction>
+    <Transaction>2016/12/08 18:51:00.000.212,=G:\Programas\Delphi\PROJETOS\AulaMulticamada\REST\SERVER\js\base64.js</Transaction>
+    <Transaction>2016/12/08 18:51:00.000.566,=G:\Programas\Delphi\PROJETOS\AulaMulticamada\REST\SERVER\js\callbackframework.js</Transaction>
+    <Transaction>2016/12/08 18:51:00.000.656,=G:\Programas\Delphi\PROJETOS\AulaMulticamada\REST\SERVER\js\serverfunctions.js</Transaction>
+    <Transaction>2016/12/08 18:51:00.000.458,=G:\Programas\Delphi\PROJETOS\AulaMulticamada\REST\SERVER\js\json2.js</Transaction>
+    <Transaction>2016/12/08 18:51:00.000.896,=G:\Programas\Delphi\PROJETOS\AulaMulticamada\REST\SERVER\js\serverfunctionexecutor-min.js</Transaction>
+    <Transaction>2016/12/08 18:51:00.000.992,=G:\Programas\Delphi\PROJETOS\AulaMulticamada\REST\SERVER\js\callbackframework-min.js</Transaction>
+    <Transaction>2016/12/08 18:51:00.000.337,=G:\Programas\Delphi\PROJETOS\AulaMulticamada\REST\SERVER\js\serverfunctionexecutor.js</Transaction>
+    <Transaction>2016/12/08 18:51:00.000.758,=G:\Programas\Delphi\PROJETOS\AulaMulticamada\REST\SERVER\js\json2-min.js</Transaction>
+    <Transaction>2016/12/08 18:51:00.000.711,=G:\Programas\Delphi\PROJETOS\AulaMulticamada\REST\SERVER\js\base64-min.js</Transaction>
+    <Transaction>2016/12/08 18:51:01.000.254,=G:\Programas\Delphi\PROJETOS\AulaMulticamada\REST\SERVER\images\collapse.png</Transaction>
+    <Transaction>2016/12/08 18:51:01.000.195,=G:\Programas\Delphi\PROJETOS\AulaMulticamada\REST\SERVER\templates\reversestring.html</Transaction>
+    <Transaction>2016/12/08 18:51:01.000.104,=G:\Programas\Delphi\PROJETOS\AulaMulticamada\REST\SERVER\js\serverfunctioninvoker.js</Transaction>
+    <Transaction>2016/12/08 18:51:01.000.286,=G:\Programas\Delphi\PROJETOS\AulaMulticamada\REST\SERVER\images\expand.png</Transaction>
+    <Transaction>2016/12/08 18:51:01.000.019,=G:\Programas\Delphi\PROJETOS\AulaMulticamada\REST\SERVER\js\connection.js</Transaction>
+    <Transaction>2016/12/08 18:51:01.000.224,=G:\Programas\Delphi\PROJETOS\AulaMulticamada\REST\SERVER\templates\serverfunctioninvoker.html</Transaction>
+    <Transaction>2016/12/08 18:51:01.000.131,=G:\Programas\Delphi\PROJETOS\AulaMulticamada\REST\SERVER\css\main.css</Transaction>
+    <Transaction>2016/12/08 18:51:01.000.167,=G:\Programas\Delphi\PROJETOS\AulaMulticamada\REST\SERVER\css\serverfunctioninvoker.css</Transaction>
+    <Transaction>2016/12/08 18:53:22.000.461,G:\Programas\Delphi\PROJETOS\AulaMulticamada\REST\SERVER\WebModuleUnit1.dfm=G:\Programas\Delphi\PROJETOS\AulaMulticamada\REST\SERVER\WebModuleAulaMulticamada.dfm</Transaction>
+    <Transaction>2016/12/08 18:53:22.000.461,G:\Programas\Delphi\PROJETOS\AulaMulticamada\REST\SERVER\WebModuleUnit1.pas=G:\Programas\Delphi\PROJETOS\AulaMulticamada\REST\SERVER\WebModuleAulaMulticamada.pas</Transaction>
+    <Transaction>2016/12/08 18:53:55.000.594,G:\Programas\Delphi\PROJETOS\AulaMulticamada\REST\SERVER\ServerMethodsUnit1.pas=G:\Programas\Delphi\PROJETOS\AulaMulticamada\REST\SERVER\Marvin.AulaMulticamada.REST.Server.Metodos.pas</Transaction>
+    <Transaction>2016/12/08 18:54:08.000.694,G:\Programas\Delphi\PROJETOS\AulaMulticamada\REST\SERVER\FormUnit1.pas=G:\Programas\Delphi\PROJETOS\AulaMulticamada\REST\SERVER\Marvin.AulaMulticamada.REST.Server.pas</Transaction>
+    <Transaction>2016/12/08 18:54:08.000.694,G:\Programas\Delphi\PROJETOS\AulaMulticamada\REST\SERVER\FormUnit1.fmx=G:\Programas\Delphi\PROJETOS\AulaMulticamada\REST\SERVER\Marvin.AulaMulticamada.REST.Server.fmx</Transaction>
+    <Transaction>2016/12/08 18:54:39.000.284,G:\Programas\Delphi\PROJETOS\AulaMulticamada\REST\SERVER\SERVER.dproj=G:\Programas\Delphi\PROJETOS\AulaMulticamada\REST\SERVER\AulaMulticamadaRESTServer.dproj</Transaction>
+  </Transactions>
+</BorlandProject>
