@@ -1,0 +1,195 @@
+object fraCadastroBase: TfraCadastroBase
+  Size.Width = 474.000000000000000000
+  Size.Height = 521.000000000000000000
+  Size.PlatformDefault = False
+  object tbcCadastro: TTabControl
+    Align = Client
+    Size.Width = 474.000000000000000000
+    Size.Height = 488.000000000000000000
+    Size.PlatformDefault = False
+    TabIndex = 1
+    TabOrder = 0
+    TabPosition = PlatformDefault
+    Sizes = (
+      474s
+      462s
+      474s
+      462s)
+    object tbiListagem: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 82.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'tbiListagem'
+      ExplicitSize.cx = 82.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+      object lvLista: TListView
+        ItemAppearanceClassName = 'TListItemAppearance'
+        ItemEditAppearanceClassName = 'TListItemShowCheckAppearance'
+        HeaderAppearanceClassName = 'TListHeaderObjects'
+        FooterAppearanceClassName = 'TListHeaderObjects'
+        Align = Client
+        Size.Width = 474.000000000000000000
+        Size.Height = 422.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        StyleLookup = 'listviewstyle'
+        OnItemClick = lvListaItemClick
+        SearchVisible = True
+      end
+      object tlbLista: TToolBar
+        Size.Width = 474.000000000000000000
+        Size.Height = 40.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        object btnNovo: TSpeedButton
+          Align = Right
+          Position.X = 424.000000000000000000
+          Size.Width = 50.000000000000000000
+          Size.Height = 40.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'addtoolbutton'
+          Text = 'btnNovo'
+          OnClick = btnNovoClick
+        end
+        object ShadowEffect1: TShadowEffect
+          Distance = 3.000000000000000000
+          Direction = 45.000000000000000000
+          Softness = 0.300000011920929000
+          Opacity = 0.250000000000000000
+          ShadowColor = claBlack
+        end
+        object btnRefresh: TSpeedButton
+          Align = Right
+          Position.X = 374.000000000000000000
+          Size.Width = 50.000000000000000000
+          Size.Height = 40.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'refreshtoolbutton'
+          Text = 'btnNovo'
+          OnClick = btnRefreshClick
+        end
+      end
+    end
+    object tbiDados: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = True
+      Size.Width = 68.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'tbiDados'
+      ExplicitSize.cx = 68.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+      object tlbDados: TToolBar
+        Size.Width = 474.000000000000000000
+        Size.Height = 40.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object lblTituloAcao: TLabel
+          Align = Contents
+          Size.Width = 474.000000000000000000
+          Size.Height = 40.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'toollabel'
+          TextSettings.HorzAlign = Center
+          Text = '[...]'
+        end
+        object btnSalvar: TSpeedButton
+          Align = Right
+          Position.X = 408.000000000000000000
+          Size.Width = 66.000000000000000000
+          Size.Height = 40.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'donetoolbutton'
+          Text = 'Salvar'
+          OnClick = btnSalvarClick
+        end
+        object btnVoltar: TSpeedButton
+          Action = ChangeTabActionListagem
+          Align = Left
+          Enabled = True
+          ImageIndex = -1
+          Size.Width = 105.000000000000000000
+          Size.Height = 40.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'backtoolbutton'
+          Visible = True
+        end
+        object ShadowEffect2: TShadowEffect
+          Distance = 3.000000000000000000
+          Direction = 45.000000000000000000
+          Softness = 0.300000011920929000
+          Opacity = 0.250000000000000000
+          ShadowColor = claBlack
+        end
+        object btnExcluir: TSpeedButton
+          Align = Right
+          Position.X = 342.000000000000000000
+          Size.Width = 66.000000000000000000
+          Size.Height = 40.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'trashtoolbutton'
+          Text = 'Salvar'
+          OnClick = btnExcluirClick
+        end
+      end
+      object scbDados: TVertScrollBox
+        Align = Client
+        Size.Width = 474.000000000000000000
+        Size.Height = 422.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'scrollboxstyle'
+        TabOrder = 1
+        Viewport.Width = 474.000000000000000000
+        Viewport.Height = 422.000000000000000000
+      end
+    end
+  end
+  object rectInfoCadastro: TRectangle
+    Align = Top
+    Fill.Color = xFF545454
+    Size.Width = 474.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Kind = None
+    object lblInfoCadastro: TLabel
+      Align = Client
+      StyledSettings = [Family, Size, FontColor]
+      Size.Width = 474.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'listboxheaderlabel'
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.HorzAlign = Center
+      Text = 'Cadastro'
+      object GlowEffect1: TGlowEffect
+        Softness = 0.400000005960464400
+        GlowColor = claWhite
+        Opacity = 0.500000000000000000
+      end
+    end
+  end
+  object actlstAcoes: TActionList
+    Left = 408
+    Top = 8
+    object ChangeTabActionListagem: TChangeTabAction
+      Category = 'Tab'
+      CustomText = 'Voltar'
+      Tab = tbiListagem
+    end
+    object ChangeTabActionDetalhe: TChangeTabAction
+      Category = 'Tab'
+      CustomText = 'Detalhe'
+      Tab = tbiDados
+    end
+  end
+end

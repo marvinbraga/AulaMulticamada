@@ -1,0 +1,31 @@
+object fraListaClientes: TfraListaClientes
+  Size.Width = 461.000000000000000000
+  Size.Height = 335.000000000000000000
+  Size.PlatformDefault = False
+  object scbListaClientes: TVertScrollBox
+    Align = Client
+    Size.Width = 461.000000000000000000
+    Size.Height = 289.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    OnResize = scbListaClientesResize
+    Viewport.Width = 461.000000000000000000
+    Viewport.Height = 289.000000000000000000
+  end
+  object tlbBotoes: TToolBar
+    Size.Width = 461.000000000000000000
+    Size.Height = 46.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object btnRefresh: TSpeedButton
+      Align = Right
+      Position.X = 415.000000000000000000
+      Size.Width = 46.000000000000000000
+      Size.Height = 46.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'refreshtoolbutton'
+      Text = 'btnNovo'
+      OnClick = btnRefreshClick
+    end
+  end
+end

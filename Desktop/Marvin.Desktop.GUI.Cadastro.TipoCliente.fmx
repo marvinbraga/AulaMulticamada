@@ -1,0 +1,142 @@
+inherited fraCadastroTipoCliente: TfraCadastroTipoCliente
+  inherited tbcCadastro: TTabControl
+    Sizes = (
+      474s
+      462s
+      474s
+      462s)
+    inherited tbiListagem: TTabItem
+      Size.Width = 82.000000000000000000
+      Size.Height = 26.000000000000000000
+      ExplicitSize.cx = 82.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+      inherited lvLista: TListView
+        Size.Height = 422.000000000000000000
+      end
+    end
+    inherited tbiDados: TTabItem
+      Size.Width = 68.000000000000000000
+      Size.Height = 26.000000000000000000
+      ExplicitSize.cx = 68.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+      inherited scbDados: TVertScrollBox
+        Size.Height = 422.000000000000000000
+        Viewport.Width = 474.000000000000000000
+        Viewport.Height = 422.000000000000000000
+        object retInformacoesBasicas: TRectangle
+          Align = Top
+          Fill.Kind = None
+          Margins.Left = 10.000000000000000000
+          Margins.Top = 10.000000000000000000
+          Margins.Right = 10.000000000000000000
+          Margins.Bottom = 10.000000000000000000
+          Position.X = 10.000000000000000000
+          Position.Y = 10.000000000000000000
+          Size.Width = 454.000000000000000000
+          Size.Height = 167.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Color = xFFF0F0F0
+          XRadius = 7.000000000000000000
+          YRadius = 7.000000000000000000
+          object edtId: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            StyleLookup = 'editstyle'
+            TabOrder = 0
+            Position.X = 13.000000000000000000
+            Position.Y = 64.000000000000000000
+            Size.Width = 129.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            TextPrompt = '00000'
+            object lbl1: TLabel
+              StyledSettings = [Family, Style, FontColor]
+              Position.Y = -24.000000000000000000
+              Size.Width = 81.000000000000000000
+              Size.Height = 25.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'labelstyle'
+              Text = 'Id'
+            end
+            object glwfct1: TGlowEffect
+              Softness = 0.400000005960464500
+              GlowColor = claGold
+              Opacity = 0.899999976158142100
+              Trigger = 'IsFocused=true'
+              Enabled = False
+            end
+          end
+          object edtDescricao: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Anchors = [akLeft, akTop, akRight]
+            StyleLookup = 'editstyle'
+            TabOrder = 1
+            Position.X = 13.000000000000000000
+            Position.Y = 120.000000000000000000
+            Size.Width = 424.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            TextPrompt = 'Informe aqui o nome do cliente.'
+            object lblDescricao: TLabel
+              StyledSettings = [Family, Style, FontColor]
+              Position.Y = -24.000000000000000000
+              Size.Width = 81.000000000000000000
+              Size.Height = 25.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'labelstyle'
+              Text = 'Descri'#231#227'o'
+            end
+            object glwfct2: TGlowEffect
+              Softness = 0.400000005960464500
+              GlowColor = claGold
+              Opacity = 0.899999976158142100
+              Trigger = 'IsFocused=true'
+              Enabled = False
+            end
+          end
+          object sdw1: TShadowEffect
+            Distance = 2.000000000000000000
+            Direction = 45.000000000000000000
+            Softness = 0.100000001490116100
+            Opacity = 0.600000023841857900
+            ShadowColor = claBlack
+          end
+          object ret1: TRectangle
+            Align = MostTop
+            Fill.Color = claWhite
+            Size.Width = 454.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Kind = None
+            XRadius = 7.000000000000000000
+            YRadius = 7.000000000000000000
+            object lblTituloInformacoesBasicas: TLabel
+              Align = Client
+              StyledSettings = [Family, Size]
+              Margins.Left = 10.000000000000000000
+              Margins.Top = 10.000000000000000000
+              Margins.Right = 10.000000000000000000
+              Margins.Bottom = 5.000000000000000000
+              Size.Width = 434.000000000000000000
+              Size.Height = 25.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'listboxheaderlabel'
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              Text = 'Informa'#231#245'es do Tipo de Cliente'
+              object inrglwfct1: TInnerGlowEffect
+                Softness = 0.070000000298023220
+                GlowColor = claGold
+                Opacity = 0.500000000000000000
+              end
+            end
+          end
+        end
+      end
+    end
+  end
+  inherited rectInfoCadastro: TRectangle
+    inherited lblInfoCadastro: TLabel
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      Text = 'Tipos de Clientes'
+    end
+  end
+end

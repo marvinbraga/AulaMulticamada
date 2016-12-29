@@ -1,0 +1,321 @@
+inherited fraCadastroClientes: TfraCadastroClientes
+  Size.Width = 411.000000000000000000
+  Size.Height = 542.000000000000000000
+  inherited tbcCadastro: TTabControl
+    Size.Width = 411.000000000000000000
+    Size.Height = 509.000000000000000000
+    Sizes = (
+      411s
+      483s
+      411s
+      483s)
+    inherited tbiListagem: TTabItem
+      Size.Width = 82.000000000000000000
+      Size.Height = 26.000000000000000000
+      ExplicitSize.cx = 82.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+      inherited lvLista: TListView
+        Size.Width = 411.000000000000000000
+      end
+      inherited tlbLista: TToolBar
+        Size.Width = 411.000000000000000000
+        inherited btnNovo: TSpeedButton
+          Position.X = 361.000000000000000000
+        end
+        inherited btnRefresh: TSpeedButton
+          Position.X = 311.000000000000000000
+        end
+      end
+    end
+    inherited tbiDados: TTabItem
+      Size.Width = 68.000000000000000000
+      Size.Height = 26.000000000000000000
+      ExplicitSize.cx = 68.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+      inherited tlbDados: TToolBar
+        Size.Width = 411.000000000000000000
+        inherited lblTituloAcao: TLabel
+          Size.Width = 411.000000000000000000
+        end
+        inherited btnSalvar: TSpeedButton
+          Position.X = 345.000000000000000000
+        end
+        inherited btnExcluir: TSpeedButton
+          Position.X = 279.000000000000000000
+        end
+      end
+      inherited scbDados: TVertScrollBox
+        Size.Width = 411.000000000000000000
+        Viewport.Width = 411.000000000000000000
+        Viewport.Height = 443.000000000000000000
+        object rectInformacoesBasicas: TRectangle
+          Align = Top
+          Fill.Kind = None
+          Margins.Left = 10.000000000000000000
+          Margins.Top = 10.000000000000000000
+          Margins.Right = 10.000000000000000000
+          Margins.Bottom = 10.000000000000000000
+          Position.X = 10.000000000000000000
+          Position.Y = 10.000000000000000000
+          Size.Width = 391.000000000000000000
+          Size.Height = 167.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Color = xFFF0F0F0
+          XRadius = 7.000000000000000000
+          YRadius = 7.000000000000000000
+          object edtId: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            StyleLookup = 'editstyle'
+            TabOrder = 0
+            Position.X = 13.000000000000000000
+            Position.Y = 64.000000000000000000
+            Size.Width = 129.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            TextPrompt = '00000'
+            object lblId: TLabel
+              StyledSettings = [Family, Style, FontColor]
+              Position.Y = -24.000000000000000000
+              Size.Width = 81.000000000000000000
+              Size.Height = 25.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'labelstyle'
+              Text = 'Id'
+            end
+            object GlowEffect2: TGlowEffect
+              Softness = 0.400000005960464500
+              GlowColor = claGold
+              Opacity = 0.899999976158142100
+              Trigger = 'IsFocused=true'
+              Enabled = False
+            end
+          end
+          object edtNome: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Anchors = [akLeft, akTop, akRight]
+            StyleLookup = 'editstyle'
+            TabOrder = 1
+            Position.X = 13.000000000000000000
+            Position.Y = 120.000000000000000000
+            Size.Width = 361.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            TextPrompt = 'Informe aqui o nome do cliente.'
+            object lblNome: TLabel
+              StyledSettings = [Family, Style, FontColor]
+              Position.Y = -24.000000000000000000
+              Size.Width = 81.000000000000000000
+              Size.Height = 25.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'labelstyle'
+              Text = 'Nome'
+            end
+            object GlowEffect3: TGlowEffect
+              Softness = 0.400000005960464500
+              GlowColor = claGold
+              Opacity = 0.899999976158142100
+              Trigger = 'IsFocused=true'
+              Enabled = False
+            end
+          end
+          object sdw1: TShadowEffect
+            Distance = 2.000000000000000000
+            Direction = 45.000000000000000000
+            Softness = 0.100000001490116100
+            Opacity = 0.600000023841857900
+            ShadowColor = claBlack
+          end
+          object ret1: TRectangle
+            Align = MostTop
+            Fill.Color = claWhite
+            Size.Width = 391.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Kind = None
+            XRadius = 7.000000000000000000
+            YRadius = 7.000000000000000000
+            object lblTituloInformacoesBasicas: TLabel
+              Align = Client
+              StyledSettings = [Family, Size]
+              Margins.Left = 10.000000000000000000
+              Margins.Top = 10.000000000000000000
+              Margins.Right = 10.000000000000000000
+              Margins.Bottom = 5.000000000000000000
+              Size.Width = 371.000000000000000000
+              Size.Height = 25.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'listboxheaderlabel'
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              Text = 'Informa'#231#245'es B'#225'sicas'
+              object inrglwfct1: TInnerGlowEffect
+                Softness = 0.070000000298023220
+                GlowColor = claGold
+                Opacity = 0.500000000000000000
+              end
+            end
+          end
+        end
+        object retOutrasInformacoes: TRectangle
+          Align = Top
+          Fill.Kind = None
+          Margins.Left = 10.000000000000000000
+          Margins.Right = 10.000000000000000000
+          Margins.Bottom = 10.000000000000000000
+          Position.X = 10.000000000000000000
+          Position.Y = 187.000000000000000000
+          Size.Width = 391.000000000000000000
+          Size.Height = 190.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Color = xFFF0F0F0
+          XRadius = 7.000000000000000000
+          YRadius = 7.000000000000000000
+          object sdw2: TShadowEffect
+            Distance = 2.000000000000000000
+            Direction = 45.000000000000000000
+            Softness = 0.100000001490116100
+            Opacity = 0.600000023841857900
+            ShadowColor = claBlack
+          end
+          object edtNumeroDocumento: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            StyleLookup = 'editstyle'
+            TabOrder = 0
+            Position.X = 16.000000000000000000
+            Position.Y = 68.000000000000000000
+            Size.Width = 177.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            TextPrompt = 'Informe o n'#250'm. do documento.'
+            object lblNumeroDocumento: TLabel
+              StyledSettings = [Family, Style, FontColor]
+              Position.Y = -24.000000000000000000
+              Size.Width = 81.000000000000000000
+              Size.Height = 25.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'labelstyle'
+              TextSettings.WordWrap = False
+              Text = 'N'#250'm. Doc.'
+            end
+            object GlowEffect4: TGlowEffect
+              Softness = 0.400000005960464500
+              GlowColor = claGold
+              Opacity = 0.899999976158142100
+              Trigger = 'IsFocused=true'
+              Enabled = False
+            end
+          end
+          object dtpDataCadastro: TDateEdit
+            ShowClearButton = True
+            Date = 42711.000000000000000000
+            Position.X = 16.000000000000000000
+            Position.Y = 134.000000000000000000
+            Size.Width = 121.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'dateeditstyle'
+            TabOrder = 2
+            object lblDataHoraCadastro: TLabel
+              StyledSettings = [Family, Style, FontColor]
+              Position.Y = -24.000000000000000000
+              Size.Width = 185.000000000000000000
+              Size.Height = 25.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'labelstyle'
+              TextSettings.WordWrap = False
+              Text = 'Data e Hora do Cadastro'
+            end
+            object GlowEffect5: TGlowEffect
+              Softness = 0.400000005960464500
+              GlowColor = claGold
+              Opacity = 0.899999976158142100
+              Trigger = 'IsFocused=true'
+              Enabled = False
+            end
+          end
+          object dtpHoraCadastro: TTimeEdit
+            ShowClearButton = True
+            Time = 0.734027777777777700
+            Position.X = 141.000000000000000000
+            Position.Y = 134.000000000000000000
+            Size.Width = 116.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'timeeditstyle'
+            TabOrder = 3
+            object GlowEffect6: TGlowEffect
+              Softness = 0.400000005960464500
+              GlowColor = claGold
+              Opacity = 0.899999976158142100
+              Trigger = 'IsFocused=true'
+              Enabled = False
+            end
+          end
+          object cbbTipoCliente: TComboBox
+            Anchors = [akLeft, akTop, akRight]
+            Position.X = 200.000000000000000000
+            Position.Y = 68.000000000000000000
+            Size.Width = 177.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'comboboxstyle'
+            TabOrder = 1
+            object lblTipoCliente: TLabel
+              StyledSettings = [Family, Style, FontColor]
+              Position.Y = -24.000000000000000000
+              Size.Width = 153.000000000000000000
+              Size.Height = 25.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'labelstyle'
+              TextSettings.WordWrap = False
+              Text = 'Tipo de Cliente'
+            end
+            object GlowEffect7: TGlowEffect
+              Softness = 0.400000005960464500
+              GlowColor = claGold
+              Opacity = 0.899999976158142100
+              Trigger = 'IsFocused=true'
+              Enabled = False
+            end
+          end
+          object ret2: TRectangle
+            Align = MostTop
+            Fill.Color = claWhite
+            Size.Width = 391.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Kind = None
+            XRadius = 7.000000000000000000
+            YRadius = 7.000000000000000000
+            object lbl1: TLabel
+              Align = Client
+              StyledSettings = [Family, Size]
+              Margins.Left = 10.000000000000000000
+              Margins.Top = 10.000000000000000000
+              Margins.Right = 10.000000000000000000
+              Margins.Bottom = 5.000000000000000000
+              Size.Width = 371.000000000000000000
+              Size.Height = 25.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'listboxheaderlabel'
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              Text = 'Outras Informa'#231#245'es'
+              object inrglwfct2: TInnerGlowEffect
+                Softness = 0.070000000298023220
+                GlowColor = claGold
+                Opacity = 0.500000000000000000
+              end
+            end
+          end
+        end
+      end
+    end
+  end
+  inherited rectInfoCadastro: TRectangle
+    Size.Width = 411.000000000000000000
+    inherited lblInfoCadastro: TLabel
+      Size.Width = 411.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      Text = 'Clientes'
+    end
+  end
+end

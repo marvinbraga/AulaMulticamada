@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2016/09/13 21:00:58.000.024,=C:\Users\mv_br\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2016/09/13 23:15:13.000.074,=C:\Users\mv_br\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2016/11/24 07:17:36.000.253,=C:\Users\mv_br\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2016/12/05 22:55:52.000.374,=C:\Users\mv_br\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2016/12/05 22:57:34.000.486,C:\Users\mv_br\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.fmx=G:\Programas\Delphi\PROJETOS\AulaMulticamada\Desktop\Marvin.Desktop.GUI.Principal.fmx</Transaction>
+    <Transaction>2016/12/05 22:57:34.000.486,C:\Users\mv_br\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas=G:\Programas\Delphi\PROJETOS\AulaMulticamada\Desktop\Marvin.Desktop.GUI.Principal.pas</Transaction>
+    <Transaction>2016/12/05 22:58:01.000.235,C:\Users\mv_br\OneDrive\Documentos\Embarcadero\Studio\Projects\Project1.dproj=G:\Programas\Delphi\PROJETOS\AulaMulticamada\Desktop\TesteEstilo.dproj</Transaction>
+    <Transaction>2016/12/07 10:33:00.000.785,=G:\Programas\Delphi\PROJETOS\AulaMulticamada\Desktop\Unit1.pas</Transaction>
+    <Transaction>2016/12/07 10:43:37.000.005,G:\Programas\Delphi\PROJETOS\AulaMulticamada\Desktop\Marvin.Desktop.GUI.Cadastro.TipoCliente.pas=G:\Programas\Delphi\PROJETOS\AulaMulticamada\Desktop\Unit1.pas</Transaction>
+    <Transaction>2016/12/07 10:43:37.000.005,G:\Programas\Delphi\PROJETOS\AulaMulticamada\Desktop\Marvin.Desktop.GUI.Cadastro.TipoCliente.fmx=G:\Programas\Delphi\PROJETOS\AulaMulticamada\Desktop\Unit1.fmx</Transaction>
+    <Transaction>2016/12/07 11:42:31.000.862,G:\Programas\Delphi\PROJETOS\AulaMulticamada\Desktop\Marvin.Desktop.GUI.Cadastro.Base.fmx=G:\Programas\Delphi\PROJETOS\AulaMulticamada\Desktop\Marvin.Desktop.GUI.Cadastro.TipoCliente.fmx</Transaction>
+    <Transaction>2016/12/07 11:42:31.000.862,G:\Programas\Delphi\PROJETOS\AulaMulticamada\Desktop\Marvin.Desktop.GUI.Cadastro.Base.pas=G:\Programas\Delphi\PROJETOS\AulaMulticamada\Desktop\Marvin.Desktop.GUI.Cadastro.TipoCliente.pas</Transaction>
+    <Transaction>2016/12/07 14:32:59.000.669,=G:\Programas\Delphi\PROJETOS\AulaMulticamada\Desktop\Unit1.pas</Transaction>
+    <Transaction>2016/12/07 14:33:23.000.915,G:\Programas\Delphi\PROJETOS\AulaMulticamada\Desktop\Marvin.Desktop.GUI.Cadastro.TipoCliente.fmx=G:\Programas\Delphi\PROJETOS\AulaMulticamada\Desktop\Unit1.fmx</Transaction>
+    <Transaction>2016/12/07 14:33:23.000.915,G:\Programas\Delphi\PROJETOS\AulaMulticamada\Desktop\Marvin.Desktop.GUI.Cadastro.TipoCliente.pas=G:\Programas\Delphi\PROJETOS\AulaMulticamada\Desktop\Unit1.pas</Transaction>
+    <Transaction>2016/12/07 17:07:37.000.673,=G:\Programas\Delphi\PROJETOS\AulaMulticamada\Desktop\Unit1.pas</Transaction>
+    <Transaction>2016/12/07 17:08:07.000.651,G:\Programas\Delphi\PROJETOS\AulaMulticamada\Desktop\Marvin.Desktop.GUI.Cadastro.Cliente.fmx=G:\Programas\Delphi\PROJETOS\AulaMulticamada\Desktop\Unit1.fmx</Transaction>
+    <Transaction>2016/12/07 17:08:07.000.651,G:\Programas\Delphi\PROJETOS\AulaMulticamada\Desktop\Marvin.Desktop.GUI.Cadastro.Cliente.pas=G:\Programas\Delphi\PROJETOS\AulaMulticamada\Desktop\Unit1.pas</Transaction>
+    <Transaction>2016/12/08 12:49:53.000.512,G:\Programas\Delphi\PROJETOS\AulaMulticamada\Desktop\FiremonkeyAulaMulticamada.dproj=G:\Programas\Delphi\PROJETOS\AulaMulticamada\Desktop\TesteEstilo.dproj</Transaction>
+    <Transaction>2016/12/08 20:51:45.000.983,=G:\Programas\Delphi\PROJETOS\AulaMulticamada\Desktop\ClientClassesUnit1.pas</Transaction>
+    <Transaction>2016/12/08 20:51:46.000.342,=G:\Programas\Delphi\PROJETOS\AulaMulticamada\Desktop\ClientModuleUnit1.pas</Transaction>
+    <Transaction>2016/12/08 21:07:12.000.575,G:\Programas\Delphi\PROJETOS\AulaMulticamada\Desktop\Marvin.Desktop.ClientModule.AulaMulticamada.dfm=G:\Programas\Delphi\PROJETOS\AulaMulticamada\Desktop\ClientModuleUnit1.dfm</Transaction>
+    <Transaction>2016/12/08 21:07:12.000.575,G:\Programas\Delphi\PROJETOS\AulaMulticamada\Desktop\Marvin.Desktop.ClientModule.AulaMulticamada.pas=G:\Programas\Delphi\PROJETOS\AulaMulticamada\Desktop\ClientModuleUnit1.pas</Transaction>
+    <Transaction>2016/12/08 21:07:26.000.091,G:\Programas\Delphi\PROJETOS\AulaMulticamada\Desktop\Marvin.Desktop.ClientClasses.AulaMulticamada.pas=G:\Programas\Delphi\PROJETOS\AulaMulticamada\Desktop\ClientClassesUnit1.pas</Transaction>
+    <Transaction>2016/12/08 21:24:41.000.175,G:\Programas\Delphi\PROJETOS\AulaMulticamada\Desktop\Marvin.Desktop.ClientClasses.AulaMulticamada.pas=</Transaction>
+    <Transaction>2016/12/09 17:54:42.000.485,=G:\Programas\Delphi\PROJETOS\AulaMulticamada\Desktop\Unit1.pas</Transaction>
+    <Transaction>2016/12/09 17:54:57.000.095,G:\Programas\Delphi\PROJETOS\AulaMulticamada\Desktop\Marvin.Desktop.ClientClasses.AulaMulticamada.pas=G:\Programas\Delphi\PROJETOS\AulaMulticamada\Desktop\Unit1.pas</Transaction>
+    <Transaction>2016/12/09 20:43:10.000.980,=G:\Programas\Delphi\PROJETOS\AulaMulticamada\Desktop\Unit1.pas</Transaction>
+    <Transaction>2016/12/09 20:43:38.000.082,G:\Programas\Delphi\PROJETOS\AulaMulticamada\Desktop\Unit1.pas=G:\Programas\Delphi\PROJETOS\AulaMulticamada\Desktop\Marvin.Desktop.Repositorio.AulaMulticamada.pas</Transaction>
+    <Transaction>2016/12/12 18:57:43.000.028,=G:\Programas\Delphi\PROJETOS\AulaMulticamada\Desktop\Unit1.pas</Transaction>
+    <Transaction>2016/12/12 18:58:15.000.660,G:\Programas\Delphi\PROJETOS\AulaMulticamada\Desktop\Marvin.Desktop.GUI.Lista.Cliente.pas=G:\Programas\Delphi\PROJETOS\AulaMulticamada\Desktop\Unit1.pas</Transaction>
+    <Transaction>2016/12/12 18:58:15.000.660,G:\Programas\Delphi\PROJETOS\AulaMulticamada\Desktop\Marvin.Desktop.GUI.Lista.Cliente.fmx=G:\Programas\Delphi\PROJETOS\AulaMulticamada\Desktop\Unit1.fmx</Transaction>
+    <Transaction>2016/12/12 19:59:17.000.006,=G:\Programas\Delphi\PROJETOS\AulaMulticamada\Desktop\Marvin.Components.Rect.pas</Transaction>
+    <Transaction>2016/12/12 22:11:52.000.116,=G:\Programas\Delphi\PROJETOS\AulaMulticamada\Desktop\Unit1.pas</Transaction>
+    <Transaction>2016/12/12 22:12:20.000.763,G:\Programas\Delphi\PROJETOS\AulaMulticamada\Desktop\Unit1.fmx=G:\Programas\Delphi\PROJETOS\AulaMulticamada\Desktop\Marvin.Desktop.GUI.Lista.Clientes.fmx</Transaction>
+    <Transaction>2016/12/12 22:12:20.000.763,G:\Programas\Delphi\PROJETOS\AulaMulticamada\Desktop\Unit1.pas=G:\Programas\Delphi\PROJETOS\AulaMulticamada\Desktop\Marvin.Desktop.GUI.Lista.Clientes.pas</Transaction>
+    <Transaction>2016/12/12 22:12:32.000.433,G:\Programas\Delphi\PROJETOS\AulaMulticamada\Desktop\Marvin.Desktop.GUI.Lista.Cliente.fmx=G:\Programas\Delphi\PROJETOS\AulaMulticamada\Desktop\Marvin.Desktop.GUI.Item.Cliente.fmx</Transaction>
+    <Transaction>2016/12/12 22:12:32.000.433,G:\Programas\Delphi\PROJETOS\AulaMulticamada\Desktop\Marvin.Desktop.GUI.Lista.Cliente.pas=G:\Programas\Delphi\PROJETOS\AulaMulticamada\Desktop\Marvin.Desktop.GUI.Item.Cliente.pas</Transaction>
+    <Transaction>2016/12/23 20:43:19.000.348,=G:\Programas\Delphi\PROJETOS\AulaMulticamada\Desktop\Unit1.pas</Transaction>
+    <Transaction>2016/12/23 20:43:42.000.396,G:\Programas\Delphi\PROJETOS\AulaMulticamada\Desktop\Marvin.Desktop.ClientExceptions.AulaMulticamada.pas=G:\Programas\Delphi\PROJETOS\AulaMulticamada\Desktop\Unit1.pas</Transaction>
+    <Transaction>2016/12/23 21:30:01.000.563,G:\Programas\Delphi\PROJETOS\AulaMulticamada\Desktop\Marvin.Desktop.ExceptionsModule.AulaMulticamada.pas=G:\Programas\Delphi\PROJETOS\AulaMulticamada\Desktop\Marvin.Desktop.ClientExceptions.AulaMulticamada.pas</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile iOSSimulator="iPhone5" Android="4100759ac89a12c7"/>
+	</ActiveMobileDevice>
+</BorlandProject>

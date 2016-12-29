@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<TgConfig Version="3" SubLevelDisabled="False">
+  <Option Name="namespaceFolder.Marvin.Desktop" Type="System.String" Value="Marvin\Desktop" Category="General" IsBrowsable="False" />
+  <Option Name="namespaceFolder.Marvin.Components" Type="System.String" Value="Marvin\Components" Category="General" IsBrowsable="False" />
+  <Option Name="namespaceFolder.Marvin.Desktop.GUI.Principal" Type="System.String" Value="Marvin\Desktop\GUI\Principal" Category="General" IsBrowsable="False" />
+  <Option Name="namespaceFolder.Marvin.Desktop.GUI.Cadastro.TipoCliente" Type="System.String" Value="Marvin\Desktop\GUI\Cadastro\TipoCliente" Category="General" IsBrowsable="False" />
+  <Option Name="namespaceFolder.Marvin.Desktop.GUI.Cadastro.Cliente" Type="System.String" Value="Marvin\Desktop\GUI\Cadastro\Cliente" Category="General" IsBrowsable="False" />
+  <Option Name="namespaceFolder.Marvin.Desktop.GUI.Cadastro.Base" Type="System.String" Value="Marvin\Desktop\GUI\Cadastro\Base" Category="General" IsBrowsable="False" />
+</TgConfig>
