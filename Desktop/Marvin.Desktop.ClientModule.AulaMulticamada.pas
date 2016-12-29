@@ -197,9 +197,17 @@ begin
       begin
         LParam := ParamStr(LCont);
         { verifica parâmetros }
-        if LParam = '-cloudconnection' then
+        if LParam <> EmptyStr then
         begin
-          FBaseURL := Format(FC_BASE_URL, [FC_AMAZON]);
+          if LParam = '-cloudconnection' then
+          begin
+            FBaseURL := Format(FC_BASE_URL, [FC_AMAZON]);
+          end
+          else
+          begin
+            FBaseURL := Format(FC_BASE_URL, [LParam]);
+            Break;
+          end;
         end;
       end;
     end;
