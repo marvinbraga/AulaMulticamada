@@ -76,11 +76,11 @@ uses
 const
   FC_BASE_URL: string = 'http://%S:8080/datasnap/rest/TAulaMulticamadaServerMetodos';
   FC_AMAZON: string = 'ec2-52-26-187-179.us-west-2.compute.amazonaws.com';
-  {$REGION 'IPs Locais'}
-  //FC_LOCAL: string = '192.168.0.14';
-  FC_LOCAL: string = '10.27.120.104';
-  {$ENDREGION}
   //FC_LOCAL: string = 'localhost';
+  {$REGION 'IPs Locais'}
+  //FC_LOCAL: string = '192.168.0.73';
+  FC_LOCAL: string = 'marvinbraga.ddns.net';
+  {$ENDREGION}
 
 { /***************************************************************************/
   | Retorna uma mensagem de um JSON.                                          |
