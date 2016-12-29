@@ -91,14 +91,23 @@ type
     constructor Create(ATamanho: Integer); reintroduce; overload; virtual;
   end;
 
+  TMRVClienteExceptionFactory = class(TMRVExceptionFactory)
+  public
+    class function GetException(const AExceptionClassName: string;
+      const AMessage: string = ''): EMRVException; override;
+  end;
+
 implementation
+
+uses
+  System.Classes;
 
 { EMRVClienteNaoInformado }
 
 constructor EMRVClienteNaoInformado.Create;
 begin
   inherited;
-  Message := 'Cliente não informado.';
+  Self.Message := 'Cliente não informado.';
 end;
 
 { EMRVClienteNaoCadastrado }
@@ -106,7 +115,7 @@ end;
 constructor EMRVClienteNaoCadastrado.Create;
 begin
   inherited;
-  Message := 'Cliente não cadastrado.';
+  Self.Message := 'Cliente não cadastrado.';
 end;
 
 { EMRVClienteJaCadastrado }
@@ -114,7 +123,7 @@ end;
 constructor EMRVClienteJaCadastrado.Create;
 begin
   inherited;
-  Message := 'Cliente já cadastrado.';
+  Self.Message := 'Cliente já cadastrado.';
 end;
 
 { EMRVClienteFereIntegridadeReferencial }
@@ -122,7 +131,7 @@ end;
 constructor EMRVClienteFereIntegridadeReferencial.Create;
 begin
   inherited;
-  Message := 'A exclusão não pode ser feita.'#$D#$A +
+  Self.Message := 'A exclusão não pode ser feita.'#$D#$A +
     'Ainda existem dependências no banco de dados.';
 end;
 { EMRVClienteClienteidInvalido }
@@ -130,7 +139,7 @@ end;
 constructor EMRVClienteClienteidInvalido.Create;
 begin
   inherited;
-  Message := 'Id do Cliente inválido.';
+  Self.Message := 'Id do Cliente inválido.';
 end;
 
 { EMRVClienteClienteidTamanhoInvalido }
@@ -138,7 +147,7 @@ end;
 constructor EMRVClienteClienteidTamanhoInvalido.Create(ATamanho: Integer);
 begin
   inherited Create;
-  Message := Format('O tamanho do campo %S excede o valor permitido que é de %d caractere(s).',
+  Self.Message := Format('O tamanho do campo %S excede o valor permitido que é de %d caractere(s).',
     ['Id do Cliente', ATamanho]);
 end;
 
@@ -147,7 +156,7 @@ end;
 constructor EMRVClienteTipoClienteIdInvalido.Create;
 begin
   inherited;
-  Message := 'Id do TipoCliente inválido.';
+  Self.Message := 'Id do TipoCliente inválido.';
 end;
 
 { EMRVClienteTipoClienteIdTamanhoInvalido }
@@ -155,7 +164,7 @@ end;
 constructor EMRVClienteTipoClienteIdTamanhoInvalido.Create(ATamanho: Integer);
 begin
   inherited Create;
-  Message := Format('O tamanho do campo %S excede o valor permitido que é de %d caractere(s).',
+  Self.Message := Format('O tamanho do campo %S excede o valor permitido que é de %d caractere(s).',
     ['Id do TipoCliente', ATamanho]);
 end;
 
@@ -164,7 +173,7 @@ end;
 constructor EMRVClienteNomeInvalido.Create;
 begin
   inherited;
-  Message := 'Nome inválido.';
+  Self.Message := 'Nome inválido.';
 end;
 
 { EMRVClienteNomeTamanhoInvalido }
@@ -172,7 +181,7 @@ end;
 constructor EMRVClienteNomeTamanhoInvalido.Create(ATamanho: Integer);
 begin
   inherited Create;
-  Message := Format('O tamanho do campo %S excede o valor permitido que é de %d caractere(s).',
+  Self.Message := Format('O tamanho do campo %S excede o valor permitido que é de %d caractere(s).',
     ['Nome', ATamanho]);
 end;
 
@@ -181,7 +190,7 @@ end;
 constructor EMRVClienteNumerodocumentoInvalido.Create;
 begin
   inherited;
-  Message := 'Número do Documento inválido.';
+  Self.Message := 'Número do Documento inválido.';
 end;
 
 { EMRVClienteNumerodocumentoTamanhoInvalido }
@@ -189,7 +198,7 @@ end;
 constructor EMRVClienteNumerodocumentoTamanhoInvalido.Create(ATamanho: Integer);
 begin
   inherited Create;
-  Message := Format('O tamanho do campo %S excede o valor permitido que é de %d caractere(s).',
+  Self.Message := Format('O tamanho do campo %S excede o valor permitido que é de %d caractere(s).',
     ['Número do Documento', ATamanho]);
 end;
 
@@ -198,7 +207,7 @@ end;
 constructor EMRVClienteDatahoracadastroInvalida.Create;
 begin
   inherited;
-  Message := 'Data e Hora inválida.';
+  Self.Message := 'Data e Hora inválida.';
 end;
 
 { EMRVClienteDatahoracadastroTamanhoInvalido }
@@ -206,7 +215,7 @@ end;
 constructor EMRVClienteDatahoracadastroTamanhoInvalido.Create(ATamanho: Integer);
 begin
   inherited Create;
-  Message := Format('O tamanho do campo %S excede o valor permitido que é de %d caractere(s).',
+  Self.Message := Format('O tamanho do campo %S excede o valor permitido que é de %d caractere(s).',
     ['Data e Hora', ATamanho]);
 end;
 
@@ -215,7 +224,48 @@ end;
 constructor EMRVClienteNumerodocumentoJaCadastrado.Create;
 begin
   inherited Create;
-  Message := 'Número do documento já cadastrado.';
+  Self.Message := 'Número do documento já cadastrado.';
+end;
+
+{ TMRVClienteExcepitionFactory }
+
+class function TMRVClienteExceptionFactory.GetException(const
+  AExceptionClassName: string; const AMessage: string): EMRVException;
+begin
+  if AExceptionClassName = 'EMRVExcecoesCliente' then
+    Result := EMRVExcecoesCliente.Create(AMessage)
+  else if AExceptionClassName = 'EMRVClienteNaoInformado' then
+    Result := EMRVClienteNaoInformado.Create(AMessage)
+  else if AExceptionClassName = 'EMRVClienteNaoCadastrado' then
+    Result := EMRVClienteNaoCadastrado.Create(AMessage)
+  else if AExceptionClassName = 'EMRVClienteJaCadastrado' then
+    Result := EMRVClienteJaCadastrado.Create(AMessage)
+  else if AExceptionClassName = 'EMRVClienteFereIntegridadeReferencial' then
+    Result := EMRVClienteFereIntegridadeReferencial.Create(AMessage)
+  else if AExceptionClassName = 'EMRVClienteClienteidInvalido' then
+    Result := EMRVClienteClienteidInvalido.Create(AMessage)
+  else if AExceptionClassName = 'EMRVClienteClienteidTamanhoInvalido' then
+    Result := EMRVClienteClienteidTamanhoInvalido.Create(AMessage)
+  else if AExceptionClassName = 'EMRVClienteTipoClienteIdInvalido' then
+    Result := EMRVClienteTipoClienteIdInvalido.Create(AMessage)
+  else if AExceptionClassName = 'EMRVClienteTipoClienteIdTamanhoInvalido' then
+    Result := EMRVClienteTipoClienteIdTamanhoInvalido.Create(AMessage)
+  else if AExceptionClassName = 'EMRVClienteNomeInvalido' then
+    Result := EMRVClienteNomeInvalido.Create(AMessage)
+  else if AExceptionClassName = 'EMRVClienteNomeTamanhoInvalido' then
+    Result := EMRVClienteNomeTamanhoInvalido.Create(AMessage)
+  else if AExceptionClassName = 'EMRVClienteNumerodocumentoInvalido' then
+    Result := EMRVClienteNumerodocumentoInvalido.Create(AMessage)
+  else if AExceptionClassName = 'EMRVClienteNumerodocumentoJaCadastrado' then
+    Result := EMRVClienteNumerodocumentoJaCadastrado.Create(AMessage)
+  else if AExceptionClassName = 'EMRVClienteNumerodocumentoTamanhoInvalido' then
+    Result := EMRVClienteNumerodocumentoTamanhoInvalido.Create(AMessage)
+  else if AExceptionClassName = 'EMRVClienteDatahoracadastroInvalida' then
+    Result := EMRVClienteDatahoracadastroInvalida.Create(AMessage)
+  else if AExceptionClassName = 'EMRVClienteDatahoracadastroTamanhoInvalido' then
+    Result := EMRVClienteDatahoracadastroTamanhoInvalido.Create(AMessage)
+  else
+    Result := nil;
 end;
 
 end.

@@ -29,20 +29,18 @@ package Marvin.AulaMulticamada.Fachada.Runtime.Server;
 
 requires
   rtl,
-  { framework }
   rtlMRVFrameworkCS,
   rtlMRVFrameworkSRV,
   rtlMRVCamadasSRV,
-  { ambiente }
   Marvin.System.Ambiente.Runtime.ClientServer,
   Marvin.System.Ambiente.Runtime.Server,
   Marvin.System.Ambiente.Usuario.Runtime.ClientServer,
-  { negócio }
   Marvin.AulaMulticamada.TipoCliente.Runtime.Server,
   Marvin.AulaMulticamada.Cliente.Runtime.Server,
   Marvin.AulaMulticamada.Controladores.Cliente.Runtime.Server;
 
 contains
-  Marvin.AulaMulticamada.Fachada in 'Servidor\Marvin.AulaMulticamada.Fachada.pas';
+  Marvin.AulaMulticamada.Fachada in 'Servidor\Marvin.AulaMulticamada.Fachada.pas',
+  Marvin.AulaMulticamada.Fachada.Singleton in 'Servidor\Marvin.AulaMulticamada.Fachada.Singleton.pas';
 
 end.

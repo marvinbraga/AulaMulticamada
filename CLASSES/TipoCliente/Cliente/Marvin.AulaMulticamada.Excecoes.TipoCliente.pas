@@ -56,14 +56,23 @@ type
     constructor Create(ATamanho: Integer); reintroduce; overload; virtual;
   end;
 
+  TMRVTipoClienteExceptionFactory = class(TMRVExceptionFactory)
+  public
+    class function GetException(const AExceptionClassName: string;
+      const AMessage: string = ''): EMRVException; override;
+  end;
+
 implementation
+
+uses
+  System.Classes;
 
 { EMRVTipoClienteNaoInformado }
 
 constructor EMRVTipoClienteNaoInformado.Create;
 begin
   inherited;
-  Message := 'TipoCliente não informado.';
+  Self.Message := 'TipoCliente não informado.';
 end;
 
 { EMRVTipoClienteNaoCadastrado }
@@ -71,7 +80,7 @@ end;
 constructor EMRVTipoClienteNaoCadastrado.Create;
 begin
   inherited;
-  Message := 'TipoCliente não cadastrado.';
+  Self.Message := 'TipoCliente não cadastrado.';
 end;
 
 { EMRVTipoClienteJaCadastrado }
@@ -79,7 +88,7 @@ end;
 constructor EMRVTipoClienteJaCadastrado.Create;
 begin
   inherited;
-  Message := 'TipoCliente já cadastrado.';
+  Self.Message := 'TipoCliente já cadastrado.';
 end;
 
 { EMRVTipoClienteFereIntegridadeReferencial }
@@ -87,7 +96,7 @@ end;
 constructor EMRVTipoClienteFereIntegridadeReferencial.Create;
 begin
   inherited;
-  Message := 'A exclusão não pode ser feita.'#$D#$A +
+  Self.Message := 'A exclusão não pode ser feita.'#$D#$A +
     'Ainda existem dependências no banco de dados.';
 end;
 { EMRVTipoClienteTipoClienteIdInvalido }
@@ -95,7 +104,7 @@ end;
 constructor EMRVTipoClienteTipoClienteIdInvalido.Create;
 begin
   inherited;
-  Message := 'Id do Tipo de Cliente inválido.';
+  Self.Message := 'Id do Tipo de Cliente inválido.';
 end;
 
 { EMRVTipoClienteTipoClienteIdTamanhoInvalido }
@@ -103,7 +112,7 @@ end;
 constructor EMRVTipoClienteTipoClienteIdTamanhoInvalido.Create(ATamanho: Integer);
 begin
   inherited Create;
-  Message := Format('O tamanho do campo %S excede o valor permitido que é de %d caractere(s).',
+  Self.Message := Format('O tamanho do campo %S excede o valor permitido que é de %d caractere(s).',
     ['Id do Tipo de Cliente', ATamanho]);
 end;
 
@@ -112,7 +121,7 @@ end;
 constructor EMRVTipoClienteDescricaoInvalida.Create;
 begin
   inherited;
-  Message := 'Descrição inválida.';
+  Self.Message := 'Descrição inválida.';
 end;
 
 { EMRVTipoClienteDescricaoTamanhoInvalido }
@@ -120,8 +129,35 @@ end;
 constructor EMRVTipoClienteDescricaoTamanhoInvalido.Create(ATamanho: Integer);
 begin
   inherited Create;
-  Message := Format('O tamanho do campo %S excede o valor permitido que é de %d caractere(s).',
+  Self.Message := Format('O tamanho do campo %S excede o valor permitido que é de %d caractere(s).',
     ['Descrição', ATamanho]);
+end;
+
+{ TMRVExcepitionFactoryTipoCliente }
+
+class function TMRVTipoClienteExceptionFactory.GetException(const
+  AExceptionClassName: string; const AMessage: string): EMRVException;
+begin
+  if AExceptionClassName = 'EMRVExcecoesTipoCliente' then
+    Result := EMRVExcecoesTipoCliente.Create(AMessage)
+  else if AExceptionClassName = 'EMRVTipoClienteNaoInformado' then
+    Result := EMRVTipoClienteNaoInformado.Create(AMessage)
+  else if AExceptionClassName = 'EMRVTipoClienteNaoCadastrado' then
+    Result := EMRVTipoClienteNaoCadastrado.Create(AMessage)
+  else if AExceptionClassName = 'EMRVTipoClienteJaCadastrado' then
+    Result := EMRVTipoClienteJaCadastrado.Create(AMessage)
+  else if AExceptionClassName = 'EMRVTipoClienteFereIntegridadeReferencial' then
+    Result := EMRVTipoClienteFereIntegridadeReferencial.Create(AMessage)
+  else if AExceptionClassName = 'EMRVTipoClienteTipoClienteIdInvalido' then
+    Result := EMRVTipoClienteTipoClienteIdInvalido.Create(AMessage)
+  else if AExceptionClassName = 'EMRVTipoClienteTipoClienteIdTamanhoInvalido' then
+    Result := EMRVTipoClienteTipoClienteIdTamanhoInvalido.Create(AMessage)
+  else if AExceptionClassName = 'EMRVTipoClienteDescricaoInvalida' then
+    Result := EMRVTipoClienteDescricaoInvalida.Create(AMessage)
+  else if AExceptionClassName = 'EMRVTipoClienteDescricaoTamanhoInvalido' then
+    Result := EMRVTipoClienteDescricaoTamanhoInvalido.Create(AMessage)
+  else
+    Result := nil;
 end;
 
 end.

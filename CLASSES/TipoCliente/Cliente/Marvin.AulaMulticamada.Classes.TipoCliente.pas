@@ -66,7 +66,8 @@ end;
 
 function TMRVTipoCliente.GetKey: string;
 begin
-  Result := IntToStr(TipoClienteId);
+  {Result := IntToStr(TipoClienteId); -> alterado para...}
+  Result := FDescricao;
 end;
 
 initialization

@@ -81,7 +81,8 @@ end;
 
 function TMRVCliente.GetKey: string;
 begin
-  Result := IntToStr(Clienteid);
+  { retorna o ID do cliente }
+  Result := IntToStr(Self.Clienteid);
 end;
 
 initialization

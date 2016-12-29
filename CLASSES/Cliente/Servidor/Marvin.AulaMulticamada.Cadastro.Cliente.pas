@@ -82,7 +82,7 @@ begin
     raise EMRVClienteNaoCadastrado.Create;
   end;
   { valida as regras de negócio }
-  Self.FazerValidacoesDeRegras(AItem);
+  //Self.FazerValidacoesDeRegras(AItem);
   { manda o Repositório excluir o objeto }
   FCliente.Excluir(AItem);
 end;
