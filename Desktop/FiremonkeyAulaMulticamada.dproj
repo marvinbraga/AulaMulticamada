@@ -284,6 +284,7 @@
         <DCC_RemoteDebug>false</DCC_RemoteDebug>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1_Win64)'!=''">
+        <Debugger_RunParams>192.168.0.73</Debugger_RunParams>
         <DCC_BplOutput>..\Bin\$(Platform)\$(Config)</DCC_BplOutput>
         <DCC_ExeOutput>..\Bin\$(Platform)\$(Config)</DCC_ExeOutput>
         <DCC_DcpOutput>..\Dcus\$(Platform)\$(Config)</DCC_DcpOutput>
