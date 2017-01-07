@@ -166,6 +166,14 @@ begin
         'PAR_NumeroDocumento');
     end;
   end;
+  if (LCliente.TipoClienteId <> C_INTEGER_NULL) then
+  begin
+    if ASearchOption.ExistPropertyName('TipoClienteId') then
+    begin
+      LCondicao := LCondicao + TMRVSQLDefs.AddCondition(
+        'TipoCliente_TipoClienteId', 'PAR_TipoClienteId');
+    end;
+  end;
 
    { Informa a SQL a ser executada }
   Query.SetSQL(TMRVSQLDefs.AddWhere(CommandSelectItems, LCondicao));
@@ -183,6 +191,13 @@ begin
     if ASearchOption.ExistPropertyName('Numerodocumento') then
     begin
       Query.ParamByName('PAR_NumeroDocumento').AsString := LCliente.Numerodocumento;
+    end;
+  end;
+  if (LCliente.TipoClienteId <> C_INTEGER_NULL) then
+  begin
+    if ASearchOption.ExistPropertyName('TipoClienteId') then
+    begin
+      Query.ParamByName('PAR_TipoClienteId').AsInteger := LCliente.TipoClienteId;
     end;
   end;
 
