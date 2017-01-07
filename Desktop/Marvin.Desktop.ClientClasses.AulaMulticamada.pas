@@ -91,6 +91,9 @@ begin
   { excluí o cliente informado }
   Result := ClientModuleAulaMulticamada.ExecuteJSONById('Cliente',
     TMRVCliente(ACliente).Clienteid.ToString, taCancel);
+  { verifica se existe alguma exceção }
+  ClientModuleAulaMulticamada.CheckException(Result);
+  { recupera o resultado }
   Result := ClientModuleAulaMulticamada.GetResultValue(Result, 'Mensagem');
 end;
 
@@ -126,8 +129,12 @@ end;
 function TMRVClientClassesAulaMulticamadaJSON.TiposClienteExcluir(const
   ATipoCliente: TMRVDadosBase): string;
 begin
+  { recupera os dados }
   Result := ClientModuleAulaMulticamada.ExecuteJSONById('TipoCliente',
     TMRVTipoCliente(ATipoCliente).TipoClienteId.ToString, taCancel);
+  { verifica se existe alguma exceção }
+  ClientModuleAulaMulticamada.CheckException(Result);
+  { recupera resultado }
   Result := ClientModuleAulaMulticamada.GetResultValue(Result, 'Mensagem');
 end;
 

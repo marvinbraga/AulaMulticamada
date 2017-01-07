@@ -66,6 +66,8 @@ type
     ret2: TRectangle;
     lbl1: TLabel;
     inrglwfct2: TInnerGlowEffect;
+    lin1: TLine;
+    lin2: TLine;
   private
     FCliente: TMRVCliente;
     FListaClientes: TMRVListaCliente;

@@ -35,7 +35,7 @@ inherited fraCadastroTipoCliente: TfraCadastroTipoCliente
           Size.Width = 454.000000000000000000
           Size.Height = 167.000000000000000000
           Size.PlatformDefault = False
-          Stroke.Color = xFFF0F0F0
+          Stroke.Kind = None
           XRadius = 7.000000000000000000
           YRadius = 7.000000000000000000
           object edtId: TEdit
@@ -107,8 +107,8 @@ inherited fraCadastroTipoCliente: TfraCadastroTipoCliente
             Size.Height = 40.000000000000000000
             Size.PlatformDefault = False
             Stroke.Kind = None
-            XRadius = 7.000000000000000000
-            YRadius = 7.000000000000000000
+            XRadius = 3.000000000000000000
+            YRadius = 3.000000000000000000
             object lblTituloInformacoesBasicas: TLabel
               Align = Client
               StyledSettings = [Family, Size]
@@ -128,6 +128,33 @@ inherited fraCadastroTipoCliente: TfraCadastroTipoCliente
                 Opacity = 0.500000000000000000
               end
             end
+          end
+          object lin1: TLine
+            Align = Bottom
+            LineType = Bottom
+            Position.Y = 160.000000000000000000
+            Size.Width = 454.000000000000000000
+            Size.Height = 7.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Kind = Gradient
+            Stroke.Gradient.Points = <
+              item
+                Color = claWhite
+                Offset = 0.000000000000000000
+              end
+              item
+                Color = xFF888383
+                Offset = 0.484472036361694300
+              end
+              item
+                Color = claWhite
+                Offset = 1.000000000000000000
+              end>
+            Stroke.Gradient.StartPosition.X = 0.500000000000000000
+            Stroke.Gradient.StartPosition.Y = 1.000000000000000000
+            Stroke.Gradient.StopPosition.X = 0.499999970197677600
+            Stroke.Gradient.StopPosition.Y = 0.000000000000000000
+            Stroke.Thickness = 2.000000000000000000
           end
         end
       end

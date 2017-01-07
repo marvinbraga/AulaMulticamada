@@ -12,16 +12,15 @@ object fraCadastroBase: TfraCadastroBase
     TabPosition = PlatformDefault
     Sizes = (
       474s
-      462s
+      483s
       474s
-      462s)
+      483s)
     object tbiListagem: TTabItem
       CustomIcon = <
         item
         end>
       IsSelected = False
-      Size.Width = 82.000000000000000000
-      Size.Height = 26.000000000000000000
+      Size.Height = 5.000000000000000000
       Size.PlatformDefault = False
       StyleLookup = ''
       TabOrder = 0
@@ -35,7 +34,7 @@ object fraCadastroBase: TfraCadastroBase
         FooterAppearanceClassName = 'TListHeaderObjects'
         Align = Client
         Size.Width = 474.000000000000000000
-        Size.Height = 422.000000000000000000
+        Size.Height = 443.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 0
         StyleLookup = 'listviewstyle'
@@ -81,8 +80,7 @@ object fraCadastroBase: TfraCadastroBase
         item
         end>
       IsSelected = True
-      Size.Width = 68.000000000000000000
-      Size.Height = 26.000000000000000000
+      Size.Height = 5.000000000000000000
       Size.PlatformDefault = False
       StyleLookup = ''
       TabOrder = 0
@@ -145,7 +143,7 @@ object fraCadastroBase: TfraCadastroBase
       object scbDados: TVertScrollBox
         Align = Client
         Size.Width = 474.000000000000000000
-        Size.Height = 422.000000000000000000
+        Size.Height = 443.000000000000000000
         Size.PlatformDefault = False
         StyleLookup = 'scrollboxstyle'
         TabOrder = 1
@@ -172,7 +170,7 @@ object fraCadastroBase: TfraCadastroBase
       TextSettings.HorzAlign = Center
       Text = 'Cadastro'
       object GlowEffect1: TGlowEffect
-        Softness = 0.400000005960464400
+        Softness = 0.400000005960464500
         GlowColor = claWhite
         Opacity = 0.500000000000000000
       end

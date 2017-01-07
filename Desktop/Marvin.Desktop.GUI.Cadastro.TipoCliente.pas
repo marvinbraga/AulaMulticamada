@@ -46,6 +46,7 @@ type
     ret1: TRectangle;
     lblTituloInformacoesBasicas: TLabel;
     inrglwfct1: TInnerGlowEffect;
+    lin1: TLine;
   private
     FTipoCliente: TMRVTipoCliente;
     FListaTiposCliente: TMRVListaTipoCliente;
@@ -101,14 +102,15 @@ begin
     LTipoCliente.Assign(FTipoCliente);
     { manda o ClientModule excluir }
     LMensagem := Self.ClientModule.TiposClienteExcluir(LTipoCliente);
+    { exibe mensagem }
+    ShowMessage(LMensagem);
+    { atualiza a lista }
+    Self.DoRefresh;
+    { muda para a aba de lista }
+    ChangeTabActionListagem.ExecuteTarget(lvLista);
   finally
     LTipoCliente.DisposeOf;
   end;
-  ShowMessage(LMensagem);
-  { atualiza a lista }
-  Self.DoRefresh;
-  { muda para a aba de lista }
-  ChangeTabActionListagem.ExecuteTarget(lvLista);
 end;
 
 procedure TfraCadastroTipoCliente.DoGetFromInterface;

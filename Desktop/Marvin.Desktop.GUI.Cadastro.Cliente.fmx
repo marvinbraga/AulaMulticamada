@@ -60,7 +60,7 @@ inherited fraCadastroClientes: TfraCadastroClientes
           Size.Width = 391.000000000000000000
           Size.Height = 167.000000000000000000
           Size.PlatformDefault = False
-          Stroke.Color = xFFF0F0F0
+          Stroke.Kind = None
           XRadius = 7.000000000000000000
           YRadius = 7.000000000000000000
           object edtId: TEdit
@@ -132,8 +132,8 @@ inherited fraCadastroClientes: TfraCadastroClientes
             Size.Height = 40.000000000000000000
             Size.PlatformDefault = False
             Stroke.Kind = None
-            XRadius = 7.000000000000000000
-            YRadius = 7.000000000000000000
+            XRadius = 3.000000000000000000
+            YRadius = 3.000000000000000000
             object lblTituloInformacoesBasicas: TLabel
               Align = Client
               StyledSettings = [Family, Size]
@@ -154,6 +154,33 @@ inherited fraCadastroClientes: TfraCadastroClientes
               end
             end
           end
+          object lin1: TLine
+            Align = Bottom
+            LineType = Bottom
+            Position.Y = 160.000000000000000000
+            Size.Width = 391.000000000000000000
+            Size.Height = 7.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Kind = Gradient
+            Stroke.Gradient.Points = <
+              item
+                Color = claWhite
+                Offset = 0.000000000000000000
+              end
+              item
+                Color = xFF888383
+                Offset = 0.484472036361694300
+              end
+              item
+                Color = claWhite
+                Offset = 1.000000000000000000
+              end>
+            Stroke.Gradient.StartPosition.X = 0.500000000000000000
+            Stroke.Gradient.StartPosition.Y = 1.000000000000000000
+            Stroke.Gradient.StopPosition.X = 0.499999970197677600
+            Stroke.Gradient.StopPosition.Y = 0.000000000000000000
+            Stroke.Thickness = 2.000000000000000000
+          end
         end
         object retOutrasInformacoes: TRectangle
           Align = Top
@@ -166,7 +193,7 @@ inherited fraCadastroClientes: TfraCadastroClientes
           Size.Width = 391.000000000000000000
           Size.Height = 190.000000000000000000
           Size.PlatformDefault = False
-          Stroke.Color = xFFF0F0F0
+          Stroke.Kind = None
           XRadius = 7.000000000000000000
           YRadius = 7.000000000000000000
           object sdw2: TShadowEffect
@@ -209,7 +236,7 @@ inherited fraCadastroClientes: TfraCadastroClientes
             Date = 42711.000000000000000000
             Position.X = 16.000000000000000000
             Position.Y = 134.000000000000000000
-            Size.Width = 121.000000000000000000
+            Size.Width = 177.000000000000000000
             Size.Height = 22.000000000000000000
             Size.PlatformDefault = False
             StyleLookup = 'dateeditstyle'
@@ -235,7 +262,7 @@ inherited fraCadastroClientes: TfraCadastroClientes
           object dtpHoraCadastro: TTimeEdit
             ShowClearButton = True
             Time = 0.734027777777777700
-            Position.X = 141.000000000000000000
+            Position.X = 200.000000000000000000
             Position.Y = 134.000000000000000000
             Size.Width = 116.000000000000000000
             Size.Height = 22.000000000000000000
@@ -284,8 +311,8 @@ inherited fraCadastroClientes: TfraCadastroClientes
             Size.Height = 40.000000000000000000
             Size.PlatformDefault = False
             Stroke.Kind = None
-            XRadius = 7.000000000000000000
-            YRadius = 7.000000000000000000
+            XRadius = 3.000000000000000000
+            YRadius = 3.000000000000000000
             object lbl1: TLabel
               Align = Client
               StyledSettings = [Family, Size]
@@ -305,6 +332,33 @@ inherited fraCadastroClientes: TfraCadastroClientes
                 Opacity = 0.500000000000000000
               end
             end
+          end
+          object lin2: TLine
+            Align = Bottom
+            LineType = Bottom
+            Position.Y = 183.000000000000000000
+            Size.Width = 391.000000000000000000
+            Size.Height = 7.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Kind = Gradient
+            Stroke.Gradient.Points = <
+              item
+                Color = claWhite
+                Offset = 0.000000000000000000
+              end
+              item
+                Color = xFF888383
+                Offset = 0.484472036361694300
+              end
+              item
+                Color = claWhite
+                Offset = 1.000000000000000000
+              end>
+            Stroke.Gradient.StartPosition.X = 0.500000000000000000
+            Stroke.Gradient.StartPosition.Y = 1.000000000000000000
+            Stroke.Gradient.StopPosition.X = 0.499999970197677600
+            Stroke.Gradient.StopPosition.Y = 0.000000000000000000
+            Stroke.Thickness = 2.000000000000000000
           end
         end
       end

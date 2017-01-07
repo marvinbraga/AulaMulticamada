@@ -34,7 +34,6 @@ type
     FBaseURL: string;
     FCriticalSection: TCriticalSection;
   protected
-    procedure CheckException(const AJSONString: string);
     function DoObjectToJSON(ADadoClasse: TMRVDadosBaseClass; const ADado:
       TMRVDadosBase; const AResourceName: string; ATipoAcao: TTipoAcao): string;
     function DoJSONtoObject(const AJSONString: string; ADadoClasse:
@@ -50,6 +49,7 @@ type
     constructor Create(AOwner: TComponent); override;
     destructor Destroy; override;
     { métodos }
+    procedure CheckException(const AJSONString: string);
     function ExecuteJSONById(const AUrlId: string; const AParam: string;
       ATipoAcao: TTipoAcao): string;
     function GetResultValue(const AJSONString: string; const AValue: string): string;
@@ -76,7 +76,6 @@ uses
 const
   FC_BASE_URL: string = 'http://%S:8080/datasnap/rest/TAulaMulticamadaServerMetodos';
   FC_AMAZON: string = 'ec2-52-26-187-179.us-west-2.compute.amazonaws.com';
-  //FC_LOCAL: string = 'localhost';
   {$REGION 'IPs Locais'}
   //FC_LOCAL: string = '192.168.0.73';
   FC_LOCAL: string = 'marvinbraga.ddns.net';
@@ -93,6 +92,7 @@ var
   LArray, LItemArray: TJSONValue;
   LEntrada, LPairString: string;
 begin
+  { inicializa }
   Result := EmptyStr;
   LEntrada := AJSONString;
   if Pos('"result":', LEntrada) = 0 then
