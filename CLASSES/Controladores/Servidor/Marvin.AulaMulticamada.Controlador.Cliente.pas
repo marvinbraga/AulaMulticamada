@@ -14,6 +14,9 @@ uses
   uMRVControladorBase,
   uMRVClasses,
   uMRVClassesServidor,
+  { interfaces }
+  Marvin.AulaMulticamada.Controlador.Intf,
+  { exceçoes }
   Marvin.AulaMulticamada.Excecoes.Cliente,
   Marvin.AulaMulticamada.Excecoes.TipoCliente,
    { cadastros }
@@ -24,7 +27,20 @@ uses
   Marvin.AulaMulticamada.Classes.Cliente;
 
 type
-  TMRVControladorCliente = class(TMRVControladorBase)
+  coMRVControladorCliente = class
+  public
+    class function Create(ACliente: TMRVCadastroCliente;
+      ATipoCliente: TMRVCadastroTipoCliente): IMRVControladorCliente;
+  end;
+
+implementation
+
+uses
+   { marvin }
+  uMRVCadastroBase;
+
+type
+  TMRVControladorCliente = class(TMRVControladorBase, IMRVControladorCliente)
   private
       { cadastros }
     FCadastroCliente: TMRVCadastroCliente;
@@ -49,11 +65,13 @@ type
       AListaResultado: TMRVListaBase; const ASearchOption: TMRVSearchOption): Boolean;
   end;
 
-implementation
+{ coMRVControladorCliente }
 
-uses
-   { marvin }
-  uMRVCadastroBase;
+class function coMRVControladorCliente.Create(ACliente: TMRVCadastroCliente;
+  ATipoCliente: TMRVCadastroTipoCliente): IMRVControladorCliente;
+begin
+  Result := TMRVControladorCliente.Create(ACliente, ATipoCliente);
+end;
 
 { TMRVControladorCliente }
 
@@ -170,13 +188,8 @@ begin
 end;
 
 procedure TMRVControladorCliente.ComplementarDados(const AItem: TMRVDadosBase);
-var
-  LCliente: TMRVCliente;
 begin
-   { esse método é utilizados quando existem objetos agregados }
-
-   { Type de validação do parâmetro }
-  LCliente := AItem as TMRVCliente;
+  { esse método é utilizados quando existem objetos agregados }
 end;
 
 end.

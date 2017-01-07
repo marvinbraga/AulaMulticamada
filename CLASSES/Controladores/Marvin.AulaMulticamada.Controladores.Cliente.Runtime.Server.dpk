@@ -38,6 +38,8 @@ requires
   Marvin.AulaMulticamada.Cliente.Runtime.Server;
 
 contains
-  Marvin.AulaMulticamada.Controlador.Cliente in 'Servidor\Marvin.AulaMulticamada.Controlador.Cliente.pas';
+  Marvin.AulaMulticamada.Controlador.Cliente in 'Servidor\Marvin.AulaMulticamada.Controlador.Cliente.pas',
+  Marvin.AulaMulticamada.Controlador.TipoCliente in 'Servidor\Marvin.AulaMulticamada.Controlador.TipoCliente.pas',
+  Marvin.AulaMulticamada.Controlador.Intf in 'Servidor\Marvin.AulaMulticamada.Controlador.Intf.pas';
 
 end.
