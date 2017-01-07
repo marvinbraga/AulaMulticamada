@@ -2,7 +2,6 @@
    (Multitiers Generator VERSÃO 0.01)
    Data e Hora: 11/10/2016 - 23:04:17
 }
-
 unit Marvin.AulaMulticamada.Fachada;
 
 interface
@@ -11,8 +10,11 @@ uses
   uMRVClasses,
   { ambiente }
   Marvin.System.Facade.Ambiente,
+  { interface }
+  Marvin.AulaMulticamada.Controlador.Intf,
   {controladores}
   Marvin.AulaMulticamada.Controlador.Cliente,
+  Marvin.AulaMulticamada.Controlador.TipoCliente,
   { cadastros }
   Marvin.AulaMulticamada.Cadastro.Cliente,
   Marvin.AulaMulticamada.Cadastro.TipoCliente;
@@ -24,7 +26,8 @@ type
     FCadastroCliente: TMRVCadastroCliente;
     FCadastroTipoCliente: TMRVCadastroTipoCliente;
     { controladores }
-    FControladorCliente: TMRVControladorCliente;
+    FControladorCliente: IMRVControladorCliente;
+    FControladorTipoCliente: IMRVControladorTipoCliente;
   protected
     { inicialização }
     procedure DoContinuarInicializandoCadastros; override;
@@ -156,6 +159,7 @@ begin
   FCadastroTipoCliente := nil;
   { controladores }
   FControladorCliente := nil;
+  FControladorTipoCliente := nil;
 end;
 
 destructor TMRVFachadaAulaMulticamada.Destroy;
@@ -185,10 +189,11 @@ begin
   end;
   LBdTipoCliente := CoMRVBdTipoCliente.Create(Self.DataBase);
   FCadastroTipoCliente := TMRVCadastroTipoCliente.Create(LBdTipoCliente);
-
-  { inicializa os controladores passando os cadastros por parÃ¢metro }
-  FControladorCliente := TMRVControladorCliente.Create(FCadastroCliente,
+  { inicializa os controladores passando os cadastros por parâmetro }
+  FControladorCliente := coMRVControladorCliente.Create(FCadastroCliente,
     FCadastroTipoCliente);
+  FControladorTipoCliente := coMRVControladorTipoCliente.Create(FCadastroTipoCliente,
+    FCadastroCliente);
 end;
 
 procedure TMRVFachadaAulaMulticamada.DoLiberarCadastros;
@@ -199,22 +204,23 @@ begin
   { libera os cadastros }
   FreeAndNil(FCadastroTipoCliente);
   { libera os controladores }
-  FreeAndNil(FControladorCliente);
+  FControladorCliente := nil;
+  FControladorTipoCliente := nil;
 end;
 
 procedure TMRVFachadaAulaMulticamada.DoTipoClientesAlterar(const AItem: TMRVDadosBase);
 begin
-  FCadastroTipoCliente.Alterar(AItem);
+  FControladorTipoCliente.Alterar(AItem);
 end;
 
 procedure TMRVFachadaAulaMulticamada.DoTipoClientesExcluir(const AItem: TMRVDadosBase);
 begin
-  FCadastroTipoCliente.Excluir(AItem);
+  FControladorTipoCliente.Excluir(AItem);
 end;
 
 procedure TMRVFachadaAulaMulticamada.DoTipoClientesInserir(const AItem: TMRVDadosBase);
 begin
-  FCadastroTipoCliente.Inserir(AItem);
+  FControladorTipoCliente.Inserir(AItem);
 end;
 
 procedure TMRVFachadaAulaMulticamada.TipoClientesAlterar(const AItem: TMRVDadosBase);
@@ -263,14 +269,14 @@ end;
 function TMRVFachadaAulaMulticamada.TipoClientesProcurarItem(const ACriterio,
   AResultado: TMRVDadosBase): Boolean;
 begin
-  Result := FCadastroTipoCliente.ProcurarItem(ACriterio, AResultado);
+  Result := FControladorTipoCliente.ProcurarItem(ACriterio, AResultado);
 end;
 
 function TMRVFachadaAulaMulticamada.TipoClientesProcurarItens(const ACriterio:
   TMRVDadosBase; const AListaResultado: TMRVListaBase; const ASearchOption:
   TMRVSearchOption): Boolean;
 begin
-  Result := FCadastroTipoCliente.ProcurarItems(ACriterio, AListaResultado, ASearchOption);
+  Result := FControladorTipoCliente.ProcurarItens(ACriterio, AListaResultado, ASearchOption);
 end;
 
 end.
