@@ -14,6 +14,7 @@ uses
   System.Variants,
   System.Actions,
   { firemonkey }
+  FMX.DialogService.Async,
   FMX.Types,
   FMX.Graphics,
   FMX.Controls,
@@ -70,6 +71,7 @@ type
     procedure SetTituloCadastro(const Value: string);
     procedure SetTituloAcao(const Value: string);
     procedure SetEstadoCadastro(const Value: TEstadoCadastro);
+    procedure InternalShowMessage(AMessage: string);
   strict protected
     procedure DoNovoCadastro; virtual;
     procedure DoAlterarCadastro(const AItem: TListViewItem); virtual;
@@ -84,6 +86,7 @@ type
     constructor Create(AOwner: TComponent); override;
     destructor Destroy; override;
     procedure Init(AClientModule: IMRVRepositorioAulaMulticamada); overload;
+    procedure ShowMessageBox(AMessage: string);
     { repositório ClientModule }
     property ClientModule: IMRVRepositorioAulaMulticamada read FClientModule;
     { propriedades do cadastro }
@@ -110,6 +113,16 @@ begin
   FTituloCadastro := lblInfoCadastro.Text;
   { continua a inicialização }
   Self.DoInit;
+end;
+
+procedure TfraCadastroBase.InternalShowMessage(AMessage: string);
+begin
+  TDialogServiceAsync.MessageDialog(AMessage,
+    System.UITypes.TMsgDlgType.mtInformation, [System.UITypes.TMsgDlgBtn.mbOk],
+    System.UITypes.TMsgDlgBtn.mbOk, 0,
+    procedure(const AResult: TModalResult)
+    begin
+    end);
 end;
 
 procedure TfraCadastroBase.btnExcluirClick(Sender: TObject);
@@ -170,6 +183,12 @@ procedure TfraCadastroBase.SetTituloCadastro(const Value: string);
 begin
   FTituloCadastro := Value;
   lblInfoCadastro.Text := FTituloCadastro;
+end;
+
+procedure TfraCadastroBase.ShowMessageBox(AMessage: string);
+begin
+  { exibe a mensagem }
+  Self.InternalShowMessage(AMessage);
 end;
 
 procedure TfraCadastroBase.DoNovoCadastro;

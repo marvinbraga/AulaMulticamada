@@ -146,7 +146,7 @@ begin
   finally
     LCliente.DisposeOf;
   end;
-  ShowMessage(LMensagem);
+  Self.ShowMessageBox(LMensagem);
   { atualiza a lista }
   Self.DoRefresh;
   { muda para a aba de lista }

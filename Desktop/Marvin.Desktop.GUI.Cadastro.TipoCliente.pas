@@ -103,7 +103,7 @@ begin
     { manda o ClientModule excluir }
     LMensagem := Self.ClientModule.TiposClienteExcluir(LTipoCliente);
     { exibe mensagem }
-    ShowMessage(LMensagem);
+    Self.ShowMessageBox(LMensagem);
     { atualiza a lista }
     Self.DoRefresh;
     { muda para a aba de lista }
