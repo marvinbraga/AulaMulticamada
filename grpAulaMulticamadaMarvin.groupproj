@@ -30,6 +30,9 @@
         <Projects Include="CLASSES\Controladores\Marvin.AulaMulticamada.Controladores.Cliente.Runtime.Server.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="CLASSES\Fachada\Marvin.AulaMulticamada.Fachada.Runtime.Server.dproj">
+            <Dependencies/>
+        </Projects>
         <Projects Include="CLASSES\Ambiente\Marvin.System.Ambiente.Runtime.ClientServer.dproj">
             <Dependencies/>
         </Projects>
@@ -39,11 +42,8 @@
         <Projects Include="CLASSES\Ambiente\Marvin.System.Ambiente.Runtime.Server.dproj">
             <Dependencies/>
         </Projects>
-        <Projects Include="CLASSES\Fachada\Marvin.AulaMulticamada.Fachada.Runtime.Server.dproj">
-            <Dependencies/>
-        </Projects>
         <Projects Include="REST\SERVER\AulaMulticamadaRESTServer.dproj">
-            <Dependencies/>
+            <Dependencies>CLASSES\TipoCliente\Marvin.AulaMulticamada.TipoCliente.Runtime.ClientServer.dproj;CLASSES\Cliente\Marvin.AulaMulticamada.Cliente.Runtime.ClientServer.dproj;CLASSES\TipoCliente\Marvin.AulaMulticamada.TipoCliente.Runtime.Server.dproj;CLASSES\Cliente\Marvin.AulaMulticamada.Cliente.Runtime.Server.dproj;CLASSES\Controladores\Marvin.AulaMulticamada.Controladores.Cliente.Runtime.Server.dproj;CLASSES\Fachada\Marvin.AulaMulticamada.Fachada.Runtime.Server.dproj</Dependencies>
         </Projects>
         <Projects Include="Desktop\FiremonkeyAulaMulticamada.dproj">
             <Dependencies/>
@@ -137,6 +137,15 @@
     <Target Name="Marvin_AulaMulticamada_Controladores_Cliente_Runtime_Server:Make">
         <MSBuild Projects="CLASSES\Controladores\Marvin.AulaMulticamada.Controladores.Cliente.Runtime.Server.dproj" Targets="Make"/>
     </Target>
+    <Target Name="Marvin_AulaMulticamada_Fachada_Runtime_Server">
+        <MSBuild Projects="CLASSES\Fachada\Marvin.AulaMulticamada.Fachada.Runtime.Server.dproj"/>
+    </Target>
+    <Target Name="Marvin_AulaMulticamada_Fachada_Runtime_Server:Clean">
+        <MSBuild Projects="CLASSES\Fachada\Marvin.AulaMulticamada.Fachada.Runtime.Server.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Marvin_AulaMulticamada_Fachada_Runtime_Server:Make">
+        <MSBuild Projects="CLASSES\Fachada\Marvin.AulaMulticamada.Fachada.Runtime.Server.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Marvin_System_Ambiente_Runtime_ClientServer">
         <MSBuild Projects="CLASSES\Ambiente\Marvin.System.Ambiente.Runtime.ClientServer.dproj"/>
     </Target>
@@ -164,22 +173,13 @@
     <Target Name="Marvin_System_Ambiente_Runtime_Server:Make">
         <MSBuild Projects="CLASSES\Ambiente\Marvin.System.Ambiente.Runtime.Server.dproj" Targets="Make"/>
     </Target>
-    <Target Name="Marvin_AulaMulticamada_Fachada_Runtime_Server">
-        <MSBuild Projects="CLASSES\Fachada\Marvin.AulaMulticamada.Fachada.Runtime.Server.dproj"/>
-    </Target>
-    <Target Name="Marvin_AulaMulticamada_Fachada_Runtime_Server:Clean">
-        <MSBuild Projects="CLASSES\Fachada\Marvin.AulaMulticamada.Fachada.Runtime.Server.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="Marvin_AulaMulticamada_Fachada_Runtime_Server:Make">
-        <MSBuild Projects="CLASSES\Fachada\Marvin.AulaMulticamada.Fachada.Runtime.Server.dproj" Targets="Make"/>
-    </Target>
-    <Target Name="AulaMulticamadaRESTServer">
+    <Target Name="AulaMulticamadaRESTServer" DependsOnTargets="Marvin.AulaMulticamada.TipoCliente.Runtime.ClientServer;Marvin.AulaMulticamada.Cliente.Runtime.ClientServer;Marvin.AulaMulticamada.TipoCliente.Runtime.Server;Marvin.AulaMulticamada.Cliente.Runtime.Server;Marvin.AulaMulticamada.Controladores.Cliente.Runtime.Server;Marvin.AulaMulticamada.Fachada.Runtime.Server">
         <MSBuild Projects="REST\SERVER\AulaMulticamadaRESTServer.dproj"/>
     </Target>
-    <Target Name="AulaMulticamadaRESTServer:Clean">
+    <Target Name="AulaMulticamadaRESTServer:Clean" DependsOnTargets="Marvin.AulaMulticamada.TipoCliente.Runtime.ClientServer:Clean;Marvin.AulaMulticamada.Cliente.Runtime.ClientServer:Clean;Marvin.AulaMulticamada.TipoCliente.Runtime.Server:Clean;Marvin.AulaMulticamada.Cliente.Runtime.Server:Clean;Marvin.AulaMulticamada.Controladores.Cliente.Runtime.Server:Clean;Marvin.AulaMulticamada.Fachada.Runtime.Server:Clean">
         <MSBuild Projects="REST\SERVER\AulaMulticamadaRESTServer.dproj" Targets="Clean"/>
     </Target>
-    <Target Name="AulaMulticamadaRESTServer:Make">
+    <Target Name="AulaMulticamadaRESTServer:Make" DependsOnTargets="Marvin.AulaMulticamada.TipoCliente.Runtime.ClientServer:Make;Marvin.AulaMulticamada.Cliente.Runtime.ClientServer:Make;Marvin.AulaMulticamada.TipoCliente.Runtime.Server:Make;Marvin.AulaMulticamada.Cliente.Runtime.Server:Make;Marvin.AulaMulticamada.Controladores.Cliente.Runtime.Server:Make;Marvin.AulaMulticamada.Fachada.Runtime.Server:Make">
         <MSBuild Projects="REST\SERVER\AulaMulticamadaRESTServer.dproj" Targets="Make"/>
     </Target>
     <Target Name="FiremonkeyAulaMulticamada">
@@ -192,13 +192,13 @@
         <MSBuild Projects="Desktop\FiremonkeyAulaMulticamada.dproj" Targets="Make"/>
     </Target>
     <Target Name="Build">
-        <CallTarget Targets="rtlMRVFrameworkCS;rtlMRVFrameworkSRV;rtlMRVCamadasSRV;rtlMRVConexaoSRV;Marvin_AulaMulticamada_TipoCliente_Runtime_ClientServer;Marvin_AulaMulticamada_Cliente_Runtime_ClientServer;Marvin_AulaMulticamada_TipoCliente_Runtime_Server;Marvin_AulaMulticamada_Cliente_Runtime_Server;Marvin_AulaMulticamada_Controladores_Cliente_Runtime_Server;Marvin_System_Ambiente_Runtime_ClientServer;Marvin_System_Ambiente_Usuario_Runtime_ClientServer;Marvin_System_Ambiente_Runtime_Server;Marvin_AulaMulticamada_Fachada_Runtime_Server;AulaMulticamadaRESTServer;FiremonkeyAulaMulticamada"/>
+        <CallTarget Targets="rtlMRVFrameworkCS;rtlMRVFrameworkSRV;rtlMRVCamadasSRV;rtlMRVConexaoSRV;Marvin_AulaMulticamada_TipoCliente_Runtime_ClientServer;Marvin_AulaMulticamada_Cliente_Runtime_ClientServer;Marvin_AulaMulticamada_TipoCliente_Runtime_Server;Marvin_AulaMulticamada_Cliente_Runtime_Server;Marvin_AulaMulticamada_Controladores_Cliente_Runtime_Server;Marvin_AulaMulticamada_Fachada_Runtime_Server;Marvin_System_Ambiente_Runtime_ClientServer;Marvin_System_Ambiente_Usuario_Runtime_ClientServer;Marvin_System_Ambiente_Runtime_Server;AulaMulticamadaRESTServer;FiremonkeyAulaMulticamada"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="rtlMRVFrameworkCS:Clean;rtlMRVFrameworkSRV:Clean;rtlMRVCamadasSRV:Clean;rtlMRVConexaoSRV:Clean;Marvin_AulaMulticamada_TipoCliente_Runtime_ClientServer:Clean;Marvin_AulaMulticamada_Cliente_Runtime_ClientServer:Clean;Marvin_AulaMulticamada_TipoCliente_Runtime_Server:Clean;Marvin_AulaMulticamada_Cliente_Runtime_Server:Clean;Marvin_AulaMulticamada_Controladores_Cliente_Runtime_Server:Clean;Marvin_System_Ambiente_Runtime_ClientServer:Clean;Marvin_System_Ambiente_Usuario_Runtime_ClientServer:Clean;Marvin_System_Ambiente_Runtime_Server:Clean;Marvin_AulaMulticamada_Fachada_Runtime_Server:Clean;AulaMulticamadaRESTServer:Clean;FiremonkeyAulaMulticamada:Clean"/>
+        <CallTarget Targets="rtlMRVFrameworkCS:Clean;rtlMRVFrameworkSRV:Clean;rtlMRVCamadasSRV:Clean;rtlMRVConexaoSRV:Clean;Marvin_AulaMulticamada_TipoCliente_Runtime_ClientServer:Clean;Marvin_AulaMulticamada_Cliente_Runtime_ClientServer:Clean;Marvin_AulaMulticamada_TipoCliente_Runtime_Server:Clean;Marvin_AulaMulticamada_Cliente_Runtime_Server:Clean;Marvin_AulaMulticamada_Controladores_Cliente_Runtime_Server:Clean;Marvin_AulaMulticamada_Fachada_Runtime_Server:Clean;Marvin_System_Ambiente_Runtime_ClientServer:Clean;Marvin_System_Ambiente_Usuario_Runtime_ClientServer:Clean;Marvin_System_Ambiente_Runtime_Server:Clean;AulaMulticamadaRESTServer:Clean;FiremonkeyAulaMulticamada:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="rtlMRVFrameworkCS:Make;rtlMRVFrameworkSRV:Make;rtlMRVCamadasSRV:Make;rtlMRVConexaoSRV:Make;Marvin_AulaMulticamada_TipoCliente_Runtime_ClientServer:Make;Marvin_AulaMulticamada_Cliente_Runtime_ClientServer:Make;Marvin_AulaMulticamada_TipoCliente_Runtime_Server:Make;Marvin_AulaMulticamada_Cliente_Runtime_Server:Make;Marvin_AulaMulticamada_Controladores_Cliente_Runtime_Server:Make;Marvin_System_Ambiente_Runtime_ClientServer:Make;Marvin_System_Ambiente_Usuario_Runtime_ClientServer:Make;Marvin_System_Ambiente_Runtime_Server:Make;Marvin_AulaMulticamada_Fachada_Runtime_Server:Make;AulaMulticamadaRESTServer:Make;FiremonkeyAulaMulticamada:Make"/>
+        <CallTarget Targets="rtlMRVFrameworkCS:Make;rtlMRVFrameworkSRV:Make;rtlMRVCamadasSRV:Make;rtlMRVConexaoSRV:Make;Marvin_AulaMulticamada_TipoCliente_Runtime_ClientServer:Make;Marvin_AulaMulticamada_Cliente_Runtime_ClientServer:Make;Marvin_AulaMulticamada_TipoCliente_Runtime_Server:Make;Marvin_AulaMulticamada_Cliente_Runtime_Server:Make;Marvin_AulaMulticamada_Controladores_Cliente_Runtime_Server:Make;Marvin_AulaMulticamada_Fachada_Runtime_Server:Make;Marvin_System_Ambiente_Runtime_ClientServer:Make;Marvin_System_Ambiente_Usuario_Runtime_ClientServer:Make;Marvin_System_Ambiente_Runtime_Server:Make;AulaMulticamadaRESTServer:Make;FiremonkeyAulaMulticamada:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>

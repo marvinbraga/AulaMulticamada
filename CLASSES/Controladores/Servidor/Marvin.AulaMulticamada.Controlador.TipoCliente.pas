@@ -166,7 +166,7 @@ begin
           { se existirem clientes então informa que não pode excluir }
           raise EMRVTipoClienteFereIntegridadeReferencial.Create(
             'Este Tipo de Cliente não pode ser excluído.' + #13#10 +
-            'Eximtem clientes associados a ele.');
+            'Existem clientes associados a ele.');
         end;
       finally
         LListaClientes.Free;
