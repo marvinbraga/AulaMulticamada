@@ -1,0 +1,26 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <DCC_OutputNeverBuildDcps>true</DCC_OutputNeverBuildDcps>
+        <VerInfo_Locale>1046</VerInfo_Locale>
+        <DCC_ImageBase>00400000</DCC_ImageBase>
+        <DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;$(DCC_Namespace)</DCC_Namespace>
+        <DCC_Description>Usuário (Servidor)</DCC_Description>
+        <DCC_DebugInformation>1</DCC_DebugInformation>
+        <SanitizedProjectName>rtlMRVUsuarioSRV</SanitizedProjectName>
+        <DCC_UnitSearchPath>Cliente;Servidor;..\..\Dcus\$(Platform)\$(Config);$(MRV_FRW_DCU)\$(Platform)\$(Config);$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+        <DebugSourcePath>Cliente;Servidor;$(DebugSourcePath)</DebugSourcePath>
+        <DCC_BplOutput>..\..\Bin\$(Platform)\$(Config)</DCC_BplOutput>
+        <DCC_DcuOutput>..\..\Dcus\$(Platform)\$(Config)</DCC_DcuOutput>
+        <DCC_DcpOutput>..\..\Dcus\$(Platform)\$(Config)</DCC_DcpOutput>
+        <VerInfo_Keys>CompanyName=Pajeu Nordeste;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=Pajeu Nordeste;LegalTrademarks=Pajeu Nordeste;OriginalFilename=rtlMRVUsuarioSRV.dpk;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+    </PropertyGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Delphi.Personality.12</Borland.Personality>
+        <Borland.ProjectType>OptionSet</Borland.ProjectType>
+        <BorlandProject>
+            <Delphi.Personality/>
+        </BorlandProject>
+        <ProjectFileVersion>12</ProjectFileVersion>
+    </ProjectExtensions>
+</Project>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2016/09/13 21:00:58.000.024,=C:\Users\mv_br\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2016/09/13 23:15:13.000.074,=C:\Users\mv_br\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2016/11/23 12:11:17.000.382,=C:\Users\mv_br\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2016/11/23 12:15:18.000.333,C:\Users\mv_br\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas=G:\Programas\Delphi\PROJETOS\AulaMulticamada\Mobile\Marvin.AulaMulticamada.GUI.Principal.pas</Transaction>
+    <Transaction>2016/11/23 12:15:18.000.333,C:\Users\mv_br\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.fmx=G:\Programas\Delphi\PROJETOS\AulaMulticamada\Mobile\Marvin.AulaMulticamada.GUI.Principal.fmx</Transaction>
+    <Transaction>2016/11/23 12:56:15.000.056,C:\Users\mv_br\OneDrive\Documentos\Embarcadero\Studio\Projects\Project1.dproj=G:\Programas\Delphi\PROJETOS\AulaMulticamada\Mobile\AulaMultiCamada.dproj</Transaction>
+    <Transaction>2016/11/23 13:56:20.000.624,=G:\Programas\Delphi\PROJETOS\AulaMulticamada\Mobile\Unit2.pas</Transaction>
+    <Transaction>2016/11/23 13:56:58.000.160,G:\Programas\Delphi\PROJETOS\AulaMulticamada\Mobile\Unit2.pas=G:\Programas\Delphi\PROJETOS\AulaMulticamada\Mobile\Marvin.Components.Rect.pas</Transaction>
+    <Transaction>2016/12/08 12:00:29.000.473,G:\Programas\Delphi\PROJETOS\AulaMulticamada\Mobile\AulaMultiCamada.dproj=G:\Programas\Delphi\PROJETOS\AulaMulticamada\Mobile\TesteApresentacaoRetangulos.dproj</Transaction>
+    <Transaction>2016/12/08 12:00:59.000.261,G:\Programas\Delphi\PROJETOS\AulaMulticamada\Mobile\Marvin.AulaMulticamada.GUI.Principal.pas=G:\Programas\Delphi\PROJETOS\AulaMulticamada\Mobile\Marvin.TesteApresentacaoRetangulos.GUI.Principal.pas</Transaction>
+    <Transaction>2016/12/08 12:00:59.000.261,G:\Programas\Delphi\PROJETOS\AulaMulticamada\Mobile\Marvin.AulaMulticamada.GUI.Principal.fmx=G:\Programas\Delphi\PROJETOS\AulaMulticamada\Mobile\Marvin.TesteApresentacaoRetangulos.GUI.Principal.fmx</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile iOSSimulator="iPhone5" Android="4100759ac89a12c7"/>
+	</ActiveMobileDevice>
+</BorlandProject>

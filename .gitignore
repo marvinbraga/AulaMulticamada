@@ -1,3 +1,18 @@
+# Delphi
+*.exe
+*.bpl
+*.dcp
+*.dcu
+*.bin
+*.~*
+*.a
+*.o
+*.apk
+*.so
+*.hpp
+*.xml
+*.txaPackage
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
