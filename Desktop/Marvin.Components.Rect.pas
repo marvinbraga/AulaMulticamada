@@ -62,7 +62,9 @@ begin
   FEstaMovendo := False;
   { cor }
   Self.Stroke.Color := TAlphaColors.Null;
+  {$WARNINGS OFF}
   Self.Fill.Color := TAlphaColor((Random(MaxInt) or TAlphaColors.Alpha));
+  {$WARNINGS ON}
   { âncora }
   Self.Anchors := [TAnchorKind.akLeft, TAnchorKind.akTop];
   { bordas }

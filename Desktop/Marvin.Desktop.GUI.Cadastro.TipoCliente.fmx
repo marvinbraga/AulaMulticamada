@@ -22,7 +22,7 @@ inherited fraCadastroTipoCliente: TfraCadastroTipoCliente
       inherited scbDados: TVertScrollBox
         Size.Height = 422.000000000000000000
         Viewport.Width = 474.000000000000000000
-        Viewport.Height = 422.000000000000000000
+        Viewport.Height = 443.000000000000000000
         object retInformacoesBasicas: TRectangle
           Align = Top
           Fill.Kind = None
@@ -58,7 +58,7 @@ inherited fraCadastroTipoCliente: TfraCadastroTipoCliente
               Text = 'Id'
             end
             object glwfct1: TGlowEffect
-              Softness = 0.400000005960464500
+              Softness = 0.400000005960464400
               GlowColor = claGold
               Opacity = 0.899999976158142100
               Trigger = 'IsFocused=true'
@@ -86,7 +86,7 @@ inherited fraCadastroTipoCliente: TfraCadastroTipoCliente
               Text = 'Descri'#231#227'o'
             end
             object glwfct2: TGlowEffect
-              Softness = 0.400000005960464500
+              Softness = 0.400000005960464400
               GlowColor = claGold
               Opacity = 0.899999976158142100
               Trigger = 'IsFocused=true'

@@ -3,12 +3,14 @@ unit Marvin.Desktop.GUI.Principal;
 interface
 
 uses
+  { embarcadero }
   System.SysUtils,
   System.Types,
   System.UITypes,
   System.Classes,
   System.Variants,
   System.Actions,
+  { firemonkey }
   FMX.Types,
   FMX.Controls,
   FMX.Forms,
@@ -63,7 +65,7 @@ type
     procedure FormDestroy(Sender: TObject);
   private
     { campos }
-    FClientModule: IMRVRepositorioAulaMulticamada;
+    FClientClasses: IMRVRepositorioAulaMulticamada;
     procedure InicializarFrames;
   public
     { Public declarations }
@@ -82,7 +84,7 @@ uses
 procedure TfrmPrincipal.FormCreate(Sender: TObject);
 begin
   { inicializa o ClientModule }
-  FClientModule := coAulaMulticamadasClientJSON.Create;
+  FClientClasses := coAulaMulticamadasClientJSON.Create;
   { página inicial }
   tbcPrincipal.ActiveTab := tbiListaClientes;
   { inicializa os frames }
@@ -92,15 +94,15 @@ end;
 procedure TfrmPrincipal.FormDestroy(Sender: TObject);
 begin
   { aterra o ClientModule }
-  FClientModule := nil;
+  FClientClasses := nil;
 end;
 
 procedure TfrmPrincipal.InicializarFrames;
 begin
   { inicializa }
-  fraListaClientesObj.Init(FClientModule);
-  fraCadastroTipoClienteObj.Init(FClientModule);
-  fraCadastroClientesObj.Init(FClientModule);
+  fraListaClientesObj.Init(FClientClasses);
+  fraCadastroTipoClienteObj.Init(FClientClasses);
+  fraCadastroClientesObj.Init(FClientClasses);
 end;
 
 procedure TfrmPrincipal.FormActivate(Sender: TObject);

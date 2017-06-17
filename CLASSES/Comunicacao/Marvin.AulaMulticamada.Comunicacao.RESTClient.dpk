@@ -1,0 +1,52 @@
+package Marvin.AulaMulticamada.Comunicacao.RESTClient;
+
+{$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
+{$DESCRIPTION 'Usuário (Servidor)'}
+{$IMPLICITBUILD OFF}
+
+requires
+  IndyIPClient,
+  RESTComponents,
+  rtlMRVSerializacaoCS,
+  rtlMRVSerializacaoInterfaceCS,
+  Marvin.AulaMulticamada.TipoCliente.Runtime.ClientServer,
+  Marvin.AulaMulticamada.Cliente.Runtime.ClientServer,
+  rtl;
+
+contains
+  Marvin.Desktop.ClientClasses.AulaMulticamada in
+    'Cliente\Marvin.Desktop.ClientClasses.AulaMulticamada.pas',
+  Marvin.Desktop.ClientModule.AulaMulticamada in
+    'Cliente\Marvin.Desktop.ClientModule.AulaMulticamada.pas'
+    {ClientModuleAulaMulticamada: TDataModule},
+  Marvin.Desktop.ExceptionsModule.AulaMulticamada in
+    'Cliente\Marvin.Desktop.ExceptionsModule.AulaMulticamada.pas',
+  Marvin.Desktop.Repositorio.AulaMulticamada in
+    'Cliente\Marvin.Desktop.Repositorio.AulaMulticamada.pas';
+
+end.
+

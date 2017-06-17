@@ -3,16 +3,19 @@ unit Marvin.Desktop.GUI.Lista.Clientes;
 interface
 
 uses
+  { embarcadero }
   System.SysUtils,
   System.Types,
   System.UITypes,
   System.Classes,
   System.Variants,
   System.Generics.Collections,
+  { marvin }
   Marvin.Components.Rect,
   Marvin.Desktop.Repositorio.AulaMulticamada,
   Marvin.AulaMulticamada.Classes.Cliente,
   Marvin.AulaMulticamada.Listas.Cliente,
+  { firemonkey }
   FMX.Types,
   FMX.Graphics,
   FMX.Controls,
@@ -90,6 +93,7 @@ end;
 
 procedure TfraListaClientes.btnRefreshClick(Sender: TObject);
 begin
+  { executa o método para carregar os dados dos clientes }
   Self.DoRefreshListaClientes;
 end;
 

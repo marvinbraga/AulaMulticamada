@@ -8,8 +8,7 @@ uses
 type
   TMRVAulaMulticamadasFacadeSingletonSealed = class sealed
   private
-    class var
-      FInstancia: TMRVFachadaAulaMulticamada;
+    class var FInstancia: TMRVFachadaAulaMulticamada;
   strict private
     class function GetInstancia: TMRVFachadaAulaMulticamada; static;
   protected

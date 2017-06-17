@@ -5,7 +5,6 @@ interface
 uses
   { marvin }
   Marvin.Desktop.Repositorio.AulaMulticamada,
-  Marvin.Desktop.ClientClasses.AulaMulticamada,
   { embarcadero }
   System.SysUtils,
   System.Types,
@@ -85,10 +84,10 @@ type
   public
     constructor Create(AOwner: TComponent); override;
     destructor Destroy; override;
-    procedure Init(AClientModule: IMRVRepositorioAulaMulticamada); overload;
+    procedure Init(AClientClasses: IMRVRepositorioAulaMulticamada); overload;
     procedure ShowMessageBox(AMessage: string);
     { repositório ClientModule }
-    property ClientModule: IMRVRepositorioAulaMulticamada read FClientModule;
+    property ClientClasses: IMRVRepositorioAulaMulticamada read FClientModule;
     { propriedades do cadastro }
     property EstadoCadastro: TEstadoCadastro read FEstadoCadastro write SetEstadoCadastro;
     property TituloCadastro: string read FTituloCadastro write SetTituloCadastro;
@@ -101,10 +100,10 @@ implementation
 
 { TfraCadastroBase }
 
-procedure TfraCadastroBase.Init(AClientModule: IMRVRepositorioAulaMulticamada);
+procedure TfraCadastroBase.Init(AClientClasses: IMRVRepositorioAulaMulticamada);
 begin
   { inicializa o ClientModule }
-  FClientModule := AClientModule;
+  FClientModule := AClientClasses;
   { inicializa com a tab da listagem }
   tbcCadastro.ActiveTab := tbiListagem;
   { esconde as abas }

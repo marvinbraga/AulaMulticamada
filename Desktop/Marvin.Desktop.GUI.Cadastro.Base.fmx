@@ -120,7 +120,6 @@ object fraCadastroBase: TfraCadastroBase
           Size.Height = 40.000000000000000000
           Size.PlatformDefault = False
           StyleLookup = 'backtoolbutton'
-          Visible = True
         end
         object ShadowEffect2: TShadowEffect
           Distance = 3.000000000000000000
@@ -148,7 +147,7 @@ object fraCadastroBase: TfraCadastroBase
         StyleLookup = 'scrollboxstyle'
         TabOrder = 1
         Viewport.Width = 474.000000000000000000
-        Viewport.Height = 422.000000000000000000
+        Viewport.Height = 443.000000000000000000
       end
     end
   end
@@ -170,7 +169,7 @@ object fraCadastroBase: TfraCadastroBase
       TextSettings.HorzAlign = Center
       Text = 'Cadastro'
       object GlowEffect1: TGlowEffect
-        Softness = 0.400000005960464500
+        Softness = 0.400000005960464400
         GlowColor = claWhite
         Opacity = 0.500000000000000000
       end

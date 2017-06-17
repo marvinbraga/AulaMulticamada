@@ -142,7 +142,7 @@ begin
   try
     LCliente.Assign(FCliente);
     { manda o ClientModule excluir }
-    LMensagem := Self.ClientModule.ClientesExcluir(LCliente);
+    LMensagem := Self.ClientClasses.ClientesExcluir(LCliente);
   finally
     LCliente.DisposeOf;
   end;
@@ -163,7 +163,7 @@ begin
   LCliente := TMRVCliente.Create;
   try
     { pede para o ClientModule recuperar os tipos de clientes cadastrados }
-    LListaClientes := Self.ClientModule.ClientesProcurarItens(LCliente) as
+    LListaClientes := Self.ClientClasses.ClientesProcurarItens(LCliente) as
       TMRVListaCliente;
     { limpa a lista }
     if Assigned(LListaClientes) then
@@ -301,13 +301,13 @@ begin
     ecNovo:
       begin
         { manda o ClientModule incluir }
-        LCliente := Self.ClientModule.ClientesInserir(FCliente) as TMRVCliente;
+        LCliente := Self.ClientClasses.ClientesInserir(FCliente) as TMRVCliente;
         Self.EstadoCadastro := ecAlterar;
       end;
     ecAlterar:
       begin
         { manda o ClientModule alterar }
-        LCliente := Self.ClientModule.ClientesAlterar(FCliente) as TMRVCliente;
+        LCliente := Self.ClientClasses.ClientesAlterar(FCliente) as TMRVCliente;
       end;
   end;
   try
@@ -353,7 +353,7 @@ begin
   LTipoCliente := TMRVTipoCliente.Create;
   try
     { recupera os tipos de cliente no ClientModule }
-    LTiposCliente := Self.ClientModule.TiposClienteProcurarItens(LTipoCliente)
+    LTiposCliente := Self.ClientClasses.TiposClienteProcurarItens(LTipoCliente)
       as TMRVListaTipoCliente;
     try
       FListaTiposCliente.Clear;

@@ -27,6 +27,7 @@ type
     FFachada: TMRVFachadaAulaMulticamada;
     FAmbiente: TMRVAmbiente;
     FAmbienteUsuario: TMRVAmbienteUsuario;
+    { métodos de apoio }
     function GetException(const AException: Exception; const ADescricaoOperacao:
       string): TJSONValue;
     function GetResult(const ADado: TMRVDadosBase; const ADescricaoOperacao:
